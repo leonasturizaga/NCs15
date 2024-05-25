@@ -23,23 +23,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = "django-insecure-5%tb8o2(1qytl$mm(uxpev(b6!@mvb4i5287lyus44-)j*gyta" #DESCOMENTAR PARA QUE FUNCIONE EN LOCAL
-SECRET_KEY = "django-insecure-5%tb8o2(1qytl$mm(uxpev(b6!@mvb4i5287lyus44-)j*gyta" #DESCOMENTAR PARA QUE FUNCIONE EN LOCAL
-
-# SECRET_KEY = os.environ.get("SECRET_KEY")#COMENTAR PARA QUE FUNCIONE EN LOCAL
-#SECRET_KEY = os.environ.get("SECRET_KEY")#COMENTAR PARA QUE FUNCIONE EN LOCAL
+SECRET_KEY = os.environ.get("SECRET_KEY")#COMENTAR PARA QUE FUNCIONE EN LOCAL
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True #DESCOMENTAR PARA QUE FUNCIONE EN LOCAL
-DEBUG = True #DESCOMENTAR PARA QUE FUNCIONE EN LOCAL
-
-# DEBUG = os.environ.get("DEBUG", "False").lower() == "true"#COMENTAR PARA QUE FUNCIONE EN LOCAL
-#DEBUG = os.environ.get("DEBUG", "False").lower() == "true"#COMENTAR PARA QUE FUNCIONE EN LOCAL
-
+DEBUG = os.environ.get("DEBUG", "False").lower() == "true"#COMENTAR PARA QUE FUNCIONE EN LOCAL
 
 # ALLOWED_HOSTS = [] #DESCOMENTAR PARA QUE FUNCIONE EN LOCAL
-ALLOWED_HOSTS = [] #DESCOMENTAR PARA QUE FUNCIONE EN LOCAL
-# ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ") #COMENTAR PARA QUE FUNCIONE EN LOCAL
-#ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ") #COMENTAR PARA QUE FUNCIONE EN LOCAL
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ") #COMENTAR PARA QUE FUNCIONE EN LOCAL
 
 
 # Application definition
@@ -97,11 +88,8 @@ DATABASES = {
     }
 }
 
-# database_url = os.environ.get("DATABASE_URL") #COMENTAR PARA QUE FUNCIONE EN LOCAL
-#database_url = os.environ.get("DATABASE_URL") #COMENTAR PARA QUE FUNCIONE EN LOCAL
-
-# DATABASES["default"] = dj_database_url.parse(database_url) #COMENTAR PARA QUE FUNCIONE EN LOCAL
-#DATABASES["default"] = dj_database_url.parse(database_url) #COMENTAR PARA QUE FUNCIONE EN LOCAL
+database_url = os.environ.get("DATABASE_URL") #COMENTAR PARA QUE FUNCIONE EN LOCAL
+DATABASES["default"] = dj_database_url.parse(database_url) #COMENTAR PARA QUE FUNCIONE EN LOCAL
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
