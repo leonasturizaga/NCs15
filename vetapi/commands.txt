@@ -1,0 +1,12 @@
+en settings.py cambiar para local/implementar líneas 25/26  29/30  32/33 y 91/92
+
+pip install django
+pip install djangorestframework
+pip install coreapi
+pip install dj-database-url
+pip install psycopg2-binary
+pip install gunicorn
+pip install 'whitenoise[brotli]'
+
+
+... fin
