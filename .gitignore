@@ -1,3 +1,4 @@
 vetapi/db.sqlite3
 vetapi/vetapi/__pycache__
 vetapi/petrecord/__pycache__
+vetapi/petrecord/migrations/__pycache__

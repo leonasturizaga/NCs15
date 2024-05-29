@@ -28,5 +28,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include(router.urls)),
     path("docs/", include_docs_urls(title="Vet API")),
-    path("validate_owner/",views.validate_owner)
+    path("validate_owner/",views.validate_owner),
+    path("", include("petrecord.urls"))
 ]
