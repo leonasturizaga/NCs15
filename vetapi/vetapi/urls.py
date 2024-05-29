@@ -23,11 +23,12 @@ from petrecord import views
 
 router = routers.DefaultRouter()
 router.register(r'owner', views.OwnerView)
+router.register(r'pet', views.PetView)
+router.register(r'owner_pet', views.Owner_PetView)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include(router.urls)),
     path("docs/", include_docs_urls(title="Vet API")),
-    path("validate_owner/",views.validate_owner),
     path("", include("petrecord.urls"))
 ]

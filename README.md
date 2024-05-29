@@ -49,7 +49,7 @@ Facilitar el cuidado de tus mascotas proporcionando un lugar seguro y accesible 
 - [Github]
 - [Linkedin]
 
-##### Oswaldo Ramirez
+##### Osvaldo Ramirez
 
 - [Github](https://github.com/OsvaldoRamirez97)
 - [Linkedin](https://www.linkedin.com/in/osvaldo-g-ramirez/)

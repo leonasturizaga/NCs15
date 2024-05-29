@@ -1,4 +1,4 @@
-en settings.py cambiar para local/implementar líneas 25/26  29/30  32/33 y 91/92
+en settings.py cambiar para local/implementar líneas 25/26  29/30  32/33 y 96/97
 
 pip install django
 pip install djangorestframework

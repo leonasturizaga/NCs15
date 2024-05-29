@@ -1,14 +1,14 @@
 from rest_framework import viewsets
 from rest_framework import status
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, action
 from rest_framework.response import Response
-from .serializer import OwnerSerializer
-from .models import Owner
+from .serializer import OwnerSerializer, PetSerializer, OwnerPetSerializer
+from .models import Owner, Pet, Owner_Pet
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views import View
 from django.shortcuts import get_object_or_404
-from .models import Owner
+from .models import Owner, Pet, Owner_Pet
 from cloudinary.uploader import upload
 from django.utils.decorators import method_decorator
 import json
@@ -28,6 +28,14 @@ ALLOWED_IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png']
 class OwnerView(viewsets.ModelViewSet):
     serializer_class = OwnerSerializer
     queryset = Owner.objects.all()
+
+class PetView(viewsets.ModelViewSet):
+    serializer_class = PetSerializer
+    queryset = Pet.objects.all()
+
+class Owner_PetView(viewsets.ModelViewSet):
+    serializer_class = OwnerPetSerializer
+    queryset = Owner_Pet.objects.all()
 
 @csrf_exempt
 def validate_owner(request):
@@ -114,3 +122,26 @@ class ImageUploadView(View):
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=500)
 
+@api_view(['POST'])
+def create_pet(request, nick):
+    try:
+        owner = get_object_or_404(Owner, pk=nick)
+        pet_serializer = PetSerializer(data=request.data)
+        if pet_serializer.is_valid():
+            pet_serializer.save()
+        else:
+            return JsonResponse({"error": pet_serializer.errors}, status=400)
+        owner_pet_serializer = OwnerPetSerializer(data={
+            "owner_nick": owner.nick,
+            "pet_id": pet_serializer.data['id']
+        })
+        if owner_pet_serializer.is_valid():
+            owner_pet_serializer.save()
+            return JsonResponse({
+                'message': 'Pet created successfully',
+            }, status=201)
+        else:
+            return JsonResponse({
+                "Owner_Pet Errors": owner_pet_serializer.errors}, status=400)
+    except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500) 
