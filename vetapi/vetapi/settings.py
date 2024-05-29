@@ -22,14 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = "django-insecure-5%tb8o2(1qytl$mm(uxpev(b6!@mvb4i5287lyus44-)j*gyta" #DESCOMENTAR PARA QUE FUNCIONE EN LOCAL
+#SECRET_KEY = "django-insecure-5%tb8o2(1qytl$mm(uxpev(b6!@mvb4i5287lyus44-)j*gyta" #DESCOMENTAR PARA QUE FUNCIONE EN LOCAL
 SECRET_KEY = os.environ.get("SECRET_KEY")#COMENTAR PARA QUE FUNCIONE EN LOCAL
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True #DESCOMENTAR PARA QUE FUNCIONE EN LOCAL
+#DEBUG = True #DESCOMENTAR PARA QUE FUNCIONE EN LOCAL
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"#COMENTAR PARA QUE FUNCIONE EN LOCAL
 
-# ALLOWED_HOSTS = [] #DESCOMENTAR PARA QUE FUNCIONE EN LOCAL
+#ALLOWED_HOSTS = [] #DESCOMENTAR PARA QUE FUNCIONE EN LOCAL
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ") #COMENTAR PARA QUE FUNCIONE EN LOCAL
 
 
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'rest_framework',
+    "cloudinary",
     "petrecord"
 ]
 
@@ -144,4 +145,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.coreapi.AutoSchema",
+}
+
+CLOUDINARY = {
+    'cloud_name': 'dby1mkv4k',
+    'api_key': '439168754263955',
+    'api_secret': 'Lsw916_QROKjF6_e3VANpPzAZPg'
 }
