@@ -1,10 +1,9 @@
 import './css/Hero.css';
 import ImagenHero from '../assets/PetDocs_foto2.png';
-const Hero = () => {
 
-    return (
-
-        <div className="container-hero">
+const Hero = () => (
+  <section className="hero">
+    <div className="container-hero">
             <div className="hero-img-container">
                 <img
                     src={ImagenHero}
@@ -24,10 +23,7 @@ const Hero = () => {
                 </div>
             </div>
         </div>
+  </section>
+);
 
-
-    );
-
-}
-
-export default Hero
+export default Hero;

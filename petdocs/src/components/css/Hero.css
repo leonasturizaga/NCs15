@@ -1,5 +1,5 @@
 .container-hero {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,7 +9,7 @@
     width: 47%;
     float: left;
     overflow-x: hidden;
-    height: 100vh;
+    /* height: 100vh; */
     object-fit: cover;
     object-position: center;
     display: flex;
@@ -101,7 +101,7 @@
   
   @media screen and (max-width: 500px){
     .container-hero {
-      height: 100vh;
+      /* height: 100vh; */
       display: flex;
       flex-flow:row wrap;
       align-items: center;
