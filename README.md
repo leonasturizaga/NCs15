@@ -4,11 +4,10 @@
 
 **Nuestra Misión** 
 Facilitar el cuidado de tus mascotas proporcionando un lugar seguro y accesible para gestionar toda su información médica. Porque sabemos que un historial médico completo es esencial para asegurar el bienestar y la felicidad de tus amigos peludos, especialmente en momentos de cambio y nuevas aventuras. 
-"Donde cada ladrido y ronroneo tiene su historia."
 
 ## Tech Stack
 
-**Cliente:** Jira/AIO test
+**Cliente:** Python, Django, SQlite, Postgrs, Render, Jira/AIO test, Drive
 
 
 ## Colaboradores:
