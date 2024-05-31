@@ -22,28 +22,11 @@ Facilitar el cuidado de tus mascotas proporcionando un lugar seguro y accesible 
 | 1  | Leon Asturizaga | [**leon-asturizaga-94a80377/**](https://www.linkedin.com/in/leon-asturizaga-94a80377/) | <img src="https://avatars.githubusercontent.com/u/128533111?v=4" alt="Image" width="28vw"> | [**leonasturizaga**](https://github.com/leonasturizaga) | PM   |
 | 2  | Sergio Gacal | [**sergiogacal/**](https://www.linkedin.com/in/sergiogacal/) | 💻 | [**SergioGacal**](https://github.com/SergioGacal) | Backend   |
 | 3  | Diego Sanabria | [**sanabriadiego/**](https://www.linkedin.com/in/sanabriadiego/) | 💻 | [**sanabriadiego**](https://github.com/sanabriadiego) | Backend   |
+| 4  | Dario Leal | [**dario-adrian-leal/**](www.linkedin.com/in/dario-adrian-leal) | 💻 | [**daro-all**](https://github.com/daro-all) | Frondend   |
+| 5  | Luz Frere | [**luzfrere/**](https://www.linkedin.com/in/luzfrere) | 💻 | [**Frere-Luz**](https://github.com/Frere-Luz) | Frondend   |
+| 6  | Luz Frere | [**osvaldo-g-ramirez/**](https://www.linkedin.com/in/osvaldo-g-ramirez/) | 💻 | [**OsvaldoRamirez97**](https://github.com/OsvaldoRamirez97) | Frondend   |
 
-#### Frontend
 
-##### Dario Leal
-
-- [Github]
-- [Linkedin](www.linkedin.com/in/dario-adrian-leal)
-
-##### Luz Frere
-
-- [Github](https://github.com/Frere-Luz)
-- [Linkedin](https://www.linkedin.com/in/luzfrere)
-
-##### Ruth Vaccari
-
-- [Github]
-- [Linkedin]
-
-##### Osvaldo Ramirez
-
-- [Github](https://github.com/OsvaldoRamirez97)
-- [Linkedin](https://www.linkedin.com/in/osvaldo-g-ramirez/)
 
 #### QA Tester
 
