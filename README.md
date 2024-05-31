@@ -11,8 +11,8 @@ Facilitar el cuidado de tus mascotas proporcionando un lugar seguro y accesible 
 
  * **Project type:** `Pet`
  * **QA Tester:** `jira` `AIO test` `Drive`.
-  * **Backend:** `Python` `Django` `PostgreSql` `Render`.
- * **Frontend:** `html` `css` `vite` `js` `react vite`.
+ * **Backend:** `Python` `Django` `PostgreSql`
+ * **Frontend:** `html` `css` `js` `react vite`.
 
 ## 📌 Team:
 
