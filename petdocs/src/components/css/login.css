@@ -51,7 +51,7 @@
     align-items: center;
   }
   
-  .btn-register {
+  .btn-login {
     background-color: #ffffff;
     border: 2px solid #ff443a;
     color: black;
@@ -61,7 +61,7 @@
     margin-left: 70%;
   }
   
-  .btn-register:hover {
+  .btn-login:hover {
     background-color: #ff443a;
     border: 2px solid #ff443a;
     color: #ffffff;
@@ -69,3 +69,4 @@
     border-radius: 50px;
     font-size: 15px;
   }
+  
