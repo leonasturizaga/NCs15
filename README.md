@@ -4,7 +4,7 @@
 
 ## ![Banner](https://github.com/No-Country/S15-21-M-Python-Js/assets/149704038/36755634-694b-4de7-82dd-bfc35c9ddd9c)
 
-## ![Logo](https://github.com/leonasturizaga/NCs15/assets/149704038/fcf04286-fe55-49b3-9c34-3cae70385e64) Nuestra Misión 
+## ![Logo](https://github.com/leonasturizaga/NCs15/assets/149704038/fcf04286-fe55-49b3-9c34-3cae70385e64) Our mission 
 Facilitar el cuidado de tus mascotas proporcionando un lugar seguro y accesible para gestionar toda su información médica. Porque sabemos que un historial médico completo es esencial para asegurar el bienestar y la felicidad de tus amigos peludos, especialmente en momentos de cambio y nuevas aventuras. 
 
 ## 🖥 Tech Stack 
