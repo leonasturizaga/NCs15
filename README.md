@@ -25,17 +25,15 @@ Facilitar el cuidado de tus mascotas proporcionando un lugar seguro y accesible 
 | 4  | Dario Leal | [**dario-adrian-leal/**](www.linkedin.com/in/dario-adrian-leal) | 💻 | [**daro-all**](https://github.com/daro-all) | Frondend   |
 | 5  | Luz Frere | [**luzfrere/**](https://www.linkedin.com/in/luzfrere) | 💻 | [**Frere-Luz**](https://github.com/Frere-Luz) | Frondend   |
 | 6  | Luz Frere | [**osvaldo-g-ramirez/**](https://www.linkedin.com/in/osvaldo-g-ramirez/) | 💻 | [**OsvaldoRamirez97**](https://github.com/OsvaldoRamirez97) | Frondend   |
+| 7  | Elena Valera | [**elena-valera/**](www.linkedin.com/in/elena-valera)| 💻 | [**ElenaValera**](https://github.com/ElenaValera) | QA   |
+| 8  | Norayma Sánchez| [**norayma-sanchez-203282133/**](https://www.linkedin.com/in/norayma-sanchez-203282133/)| 💻 | [**Norayma**](https://github.com/Norayma) | Tester   |
+
+## :computer: Thanks
+
+[**No Country**](https://www.nocountry.tech/)
+
+<div style="text-align: center;">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsukYB3HL90LSwYv_RIR2O2OlCV8Sbkx2eNHv8nRvOu8L16FxLQ0nPzY02wQ_BJOfQZw&usqp=CAU" align="center" width="324"/>
+</div>
 
 
-
-#### QA Tester
-
-##### Elena Valera
-
-- [Github](https://github.com/ElenaValera)
-- [Linkedin](www.linkedin.com/in/elena-valera)
-
-##### Norayma Sanchez
-
-- [Github](https://github.com/Norayma)
-- [Linkedin](https://www.linkedin.com/in/norayma-sanchez-203282133/)
