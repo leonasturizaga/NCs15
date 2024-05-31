@@ -1,34 +1,27 @@
+## s15-21-m-python-js
+
 # PetDocs
 
 ## ![Banner](https://github.com/No-Country/S15-21-M-Python-Js/assets/149704038/36755634-694b-4de7-82dd-bfc35c9ddd9c)
 
-**Nuestra Misión** 
+## ![Logo](https://github.com/leonasturizaga/NCs15/assets/149704038/fcf04286-fe55-49b3-9c34-3cae70385e64) Nuestra Misión 
 Facilitar el cuidado de tus mascotas proporcionando un lugar seguro y accesible para gestionar toda su información médica. Porque sabemos que un historial médico completo es esencial para asegurar el bienestar y la felicidad de tus amigos peludos, especialmente en momentos de cambio y nuevas aventuras. 
 
-## Tech Stack
+## 🖥 Tech Stack 
 
-**Cliente:** Python, Django, SQlite, Postgrs, Render, html, css, js, react vite, Jira/AIO test, Drive
+ * **Project type:** `Pet`
+ * **QA Tester:** `jira` `AIO test` `Drive`.
+  * **Backend:** `Python` `Django` `SQLite` `Postgrs` `Render`.
+ * **Frontend:** `html` `css` `vite` `js` `react vite`.
 
-## Colaboradores:
+## 📌 Team:
 
-#### PM
 
-##### Leon Asturizaga
-
-- [Github](https://github.com/leonasturizaga)
-- [Linkedin](https://www.linkedin.com/in/leon-asturizaga-94a80377/)
-
-#### Backend 
-
-##### Sergio Gacal
-
-- [Github](https://github.com/SergioGacal)
-- [Linkedin ](https://www.linkedin.com/in/sergiogacal/)
-
-##### Diego Sanabria
-
-- [Github](https://github.com/sanabriadiego)
-- [Linkedin](https://www.linkedin.com/in/sanabriadiego/)
+| Count | Name                                                                                   | <img src="https://static.licdn.com/aero-v1/sc/h/3loy7tajf3n0cho89wgg0fjre?raw=true" alt="Image" width="28vw"> <br /> linkedin.com/in/ | :octocat:| Github <br/> Nickname| Role <br /> (Only this project) |
+| --- |--- | --- | --- | --- | ---: |
+| 1  | Leon Asturizaga | [**leon-asturizaga-94a80377/**](https://www.linkedin.com/in/leon-asturizaga-94a80377/) | <img src="https://avatars.githubusercontent.com/u/128533111?v=4" alt="Image" width="28vw"> | [**leonasturizaga**](https://github.com/leonasturizaga) | PM   |
+| 2  | Sergio Gacal | [**sergiogacal/**](https://www.linkedin.com/in/sergiogacal/) | 💻 | [**SergioGacal**](https://github.com/SergioGacal) | Backend   |
+| 3  | Diego Sanabria | [**sanabriadiego/**](https://www.linkedin.com/in/sanabriadiego/) | 💻 | [**sanabriadiego**](https://github.com/sanabriadiego) | Backend   |
 
 #### Frontend
 
