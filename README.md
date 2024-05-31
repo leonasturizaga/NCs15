@@ -7,8 +7,7 @@ Facilitar el cuidado de tus mascotas proporcionando un lugar seguro y accesible 
 
 ## Tech Stack
 
-**Cliente:** Python, Django, SQlite, Postgrs, Render, Jira/AIO test, Drive
-
+**Cliente:** Python, Django, SQlite, Postgrs, Render, html, css, js, react vite, Jira/AIO test, Drive
 
 ## Colaboradores:
 
