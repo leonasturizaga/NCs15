@@ -9,7 +9,7 @@ Facilitar el cuidado de tus mascotas proporcionando un lugar seguro y accesible 
 
 ## 🖥 Tech Stack 
 
- * **Project type:** `Pet`
+ * **Project type:** `Pets`
  * **QA Tester:** `jira` `AIO test` `Drive`.
  * **Backend:** `Python` `Django` `PostgreSql`
  * **Frontend:** `html` `css` `js` `react vite`.
