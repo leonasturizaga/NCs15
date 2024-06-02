@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Owner, Pet, Owner_Pet
+from .models import Owner, Pet, Owner_Pet, Event
 
 class OwnerSerializer(serializers.ModelSerializer):
     class Meta:
@@ -16,3 +16,8 @@ class OwnerPetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Owner_Pet
         fields = '__all__'
+        
+class EventSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Event
+        fields = '__all__'        

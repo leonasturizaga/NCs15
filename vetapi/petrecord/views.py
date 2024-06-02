@@ -1,9 +1,9 @@
 from rest_framework import viewsets
-from rest_framework import status
+from rest_framework import status, generics
 from rest_framework.decorators import api_view, action
 from rest_framework.response import Response
-from .serializer import OwnerSerializer, PetSerializer, OwnerPetSerializer
-from .models import Owner, Pet, Owner_Pet
+from .serializer import OwnerSerializer, PetSerializer, OwnerPetSerializer, EventSerializer
+from .models import Owner, Pet, Owner_Pet, Event
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views import View
@@ -36,6 +36,14 @@ class PetView(viewsets.ModelViewSet):
 class Owner_PetView(viewsets.ModelViewSet):
     serializer_class = OwnerPetSerializer
     queryset = Owner_Pet.objects.all()
+
+class EventListCreate(generics.ListCreateAPIView):
+    queryset = Event.objects.all()
+    serializer_class = EventSerializer
+
+class EventRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Event.objects.all()
+    serializer_class = EventSerializer
 
 @csrf_exempt
 def validate_owner(request):
