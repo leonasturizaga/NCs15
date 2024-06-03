@@ -1,15 +1,20 @@
+
+// src/App.jsx
+import React, { useState } from 'react';
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
-// Componentes
+// Components
 import Header from "./components/Header";
 import Caracteristicas from "./components/Caracteristicas";
 import Hero from "./components/Hero";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
+import Register from "./components/Register"; 
+import Login from "./components/Login"; 
 
-// Imágenes
+// Images
 import pathLogo from "./assets/logo-with-name.jpeg";
 import pathYellowCircle from "./assets/yellow_circle_.png";
 import pathOrangeCircle from "./assets/orange_circle_.png";
@@ -19,7 +24,18 @@ import pathAgenda from "./assets/icon_agenda.png";
 import pathPen from "./assets/icon_lapiz.png";
 
 function App() {
-  //Botones para el navbar.
+  const [currentPage,setCurrentPage] = useState("home");
+
+  // Handler to show the Register component
+  const handleRegisterClick = () => {
+    setCurrentPage("Register");
+  };
+  // Handler to show the Login component
+  const handleLoginClick = () => {
+    setCurrentPage("Login");
+  };
+
+  // Navbar buttons
   let items = ["Inicio", "Nosotros"];
 
   let cards = [
@@ -49,24 +65,18 @@ function App() {
   return (
     <>
       <Header brandName={"PetDocs"} pathLogo={pathLogo} navItems={items} />
-	  
-  	  <Hero />
 
-      <Caracteristicas cardData={cards} />
-	  
-	    <Banner />
-	  
-	    <Footer />
-	  
-	    {/* <div>
-        <Hero />        
-      </div>
-      <div>
-        <Banner />
-      </div>
-      <div>
-        <Footer />
-      </div> */}
+      {currentPage === "Login" && <Login />}
+      {currentPage === "Register" && <Register />}
+      {currentPage === "home" && (
+          <>
+          <Hero onLoginClick={handleLoginClick} onRegisterClick={handleRegisterClick} />
+          <Caracteristicas cardData={cards} />
+          <Banner />
+        </>
+      )}
+
+      <Footer />
     </>
   );
 }
