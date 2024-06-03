@@ -1,62 +1,74 @@
-// //import { useState } from 'react'
-// import Hero from './components/Hero'
-// import './App.css'
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.min.js";
 
-// function App() {
-//   return (
-//     <>
-//       <div>
-//         <Hero />
-//       </div>
-      
-//     </>
-//   )
-// }
+// Componentes
+import Header from "./components/Header";
+import Caracteristicas from "./components/Caracteristicas";
+import Hero from "./components/Hero";
+import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 
-// export default App
+// Imágenes
+import pathLogo from "./assets/logo-with-name.jpeg";
+import pathYellowCircle from "./assets/yellow_circle_.png";
+import pathOrangeCircle from "./assets/orange_circle_.png";
+import pathRedCircle from "./assets/red_circle_.png";
+import pathPaw from "./assets/paw-icon2.png";
+import pathAgenda from "./assets/icon_agenda.png";
+import pathPen from "./assets/icon_lapiz.png";
 
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
+function App() {
+  //Botones para el navbar.
+  let items = ["Inicio", "Nosotros"];
 
-import imagePath from "./assets/logo-with-name.jpeg";
-// import "bootstrap/dist/css/bootstrap.css";
-// import "bootstrap/dist/js/bootstrap.min.js";
+  let cards = [
+    {
+      id: "yellowCard",
+      title: "Añadir mascota",
+      link: "",
+      background: pathYellowCircle,
+      icon: pathPen,
+    },
+    {
+      id: "orangeCard",
+      title: "Ver mascota",
+      link: "",
+      background: pathOrangeCircle,
+      icon: pathPaw,
+    },
+    {
+      id: "redCard",
+      title: "Crear recordatorio",
+      link: "",
+      background: pathRedCircle,
+      icon: pathAgenda,
+    },
+  ];
 
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Body from './components/Body';
-import Footer from './components/Footer';
-import Register from './components/Register';
-import Login from './components/Login';
-import './App.css';
+  return (
+    <>
+      <Header brandName={"PetDocs"} pathLogo={pathLogo} navItems={items} />
+	  
+  	  <Hero />
 
-
-let items = ["Inicio", "Nosotros"];
-
-const App = () => (
-
-  <Router>
-    <div className="App">
-   
-      <Header brandName={"PetDocs"} imageSrcPath={imagePath} navItems={items} />
-      {/* <p>{repeatLoremIpsum(10)}</p> */}
-
-      <Navbar />
-      <Routes>
-        <Route path="/" element={
-          <>
-            <Hero />
-            <Body />
-          </>
-        } />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-
-      </Routes>
-      <Footer />
-    </div>
-  </Router>
-);
+      <Caracteristicas cardData={cards} />
+	  
+	    <Banner />
+	  
+	    <Footer />
+	  
+	    {/* <div>
+        <Hero />        
+      </div>
+      <div>
+        <Banner />
+      </div>
+      <div>
+        <Footer />
+      </div> */}
+    </>
+  );
+}
 
 export default App;

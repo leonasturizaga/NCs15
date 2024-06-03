@@ -1,0 +1,39 @@
+.container-footer{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 30vh;
+    background-color: var(--color-tertiary);
+}
+.petdocsLogo {
+    padding-left: 70px;
+    width: 120px;
+    float: left;
+    flex-shrink: 2;
+}
+.redes-footer {
+    display: flex;
+    flex-flow: row wrap;
+    padding-right: 70px;
+}
+.rs-footer img {
+    width: 45px;
+    padding: 0 30px;
+}
+@media screen and (max-width: 500px){
+    .redes-footer {
+        display: flex;
+        flex-flow: column wrap;
+        padding-right: 30px;  
+    }
+    .petdocsLogo {
+        padding-left: 30px;
+    }
+    .rs-footer img{
+        width: 35px;
+    }
+}

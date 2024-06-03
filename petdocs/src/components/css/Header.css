@@ -1,0 +1,31 @@
+nav li a {
+    font-family: var(--font-text);
+     /* 'Open Sans', sans-serif; */
+}
+
+/* inútil si se usa el logo con nombre */
+#brandText {
+    font-family: 'Titan One', sans-serif;
+    color: #ff5757;
+    padding: 1rem;
+}
+
+/* Para el color de fondo del header/navbar */
+.navbar-custom-bg-color {
+    background-color: var(--color-tertiary);
+    /* background-color: #ff5757; */
+}
+
+/* Para el color de texto de los links del header/navbar */
+.navbar-custom-text-color {
+    color: white;
+}
+
+/* .btn-outline-light.navbar-toggler {
+    background-color: #ff5757;
+    border-color: white;
+}
+  
+.btn-outline-light.navbar-toggler .navbar-toggler-icon {
+    fill: #ff5757;
+} */
