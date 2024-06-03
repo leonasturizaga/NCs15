@@ -1,5 +1,5 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Titan+One&display=swap');
+
 :root {
   --bg-color: #ddd;
   --color-text: #130101;
@@ -16,5 +16,15 @@
 
 body {
   margin: 0;
-  padding:0;
+  /* padding:0; --- ORIGINAL*/
+  padding: 6rem 0 0 0;
+
+  /* AGRAGADO POR DARO */
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
 }
