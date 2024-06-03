@@ -9,9 +9,13 @@
     height: 30vh;
     background-color: var(--color-tertiary);
 }
-.petdocsLogo {
+.brand-footer a {
+    font-family: var(--font-brand);
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: var(--color-secondary);
     padding-left: 70px;
-    width: 120px;
+    width: 170px ;
     float: left;
     flex-shrink: 2;
 }
@@ -21,19 +25,31 @@
     padding-right: 70px;
 }
 .rs-footer img {
-    width: 45px;
+    width: 110px !important;
     padding: 0 30px;
 }
+/* corte responsivo */
+@media screen and (max-width: 576px){
+    .redes-footer {
+        flex-flow: column wrap;
+    }
+    .rs-footer>a> img{
+        width: 60px !important;
+        padding: 5px;
+    }
+}
+
 @media screen and (max-width: 500px){
     .redes-footer {
         display: flex;
         flex-flow: column wrap;
-        padding-right: 30px;  
+        padding-right: 30px !important;
     }
-    .petdocsLogo {
+    .brand-footer a {
         padding-left: 30px;
     }
-    .rs-footer img{
-        width: 35px;
+    .rs-footer>a>img{
+        width: 50px !important;
+        padding: 5px;
     }
 }
