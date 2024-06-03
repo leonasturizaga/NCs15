@@ -100,6 +100,12 @@
   color: var(--bg-color);
 }
 
+@media screen and (min-width: 1440px){
+    .container-hero {
+      height: 100vh;
+      padding: 2rem;
+    }
+}
 
 @media screen and (max-width: 500px){
   .container-hero {

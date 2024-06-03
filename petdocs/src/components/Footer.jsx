@@ -1,5 +1,5 @@
 import './css/Footer.css';
-import ImagenLogo from "../assets/LogoPetDocs.png";
+// import ImagenLogo from "../assets/LogoPetDocs.png";
 import ImagenInstagram from "../assets/iconoInstagram-alfa.png";
 import ImagenWhatsapp from "../assets/iconoWhatsapp-alfa.png";
 import ImagenMail from "../assets/iconoMail-alfa.png";
@@ -9,8 +9,8 @@ const Footer = () => {
     return (
 
         <div className="container-footer">            
-            <div className="logo-footer">
-                <a href="#"><img className="petdocsLogo" src= {ImagenLogo} alt="logoPetDocs" /></a>
+            <div className="brand-footer">
+                <a href="#">PetDocs</a>   
             </div>            
             <div className="redes-footer">
                 <div className="rs-footer">
