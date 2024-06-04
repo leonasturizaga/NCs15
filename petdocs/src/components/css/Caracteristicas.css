@@ -1,9 +1,11 @@
 .cardsContainer{
-    padding: 4rem 0;
+    height: 100vh;
+    /* padding: 4rem 0; */
     display: flex;
     gap: 0.7rem;
     justify-content: space-around;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 a {
@@ -65,19 +67,45 @@ a {
 } */
 
 @media screen and (max-width: 500px){
-    .card {
-        width: 10rem;
+    .cardsContainer{
+        gap: 0.3rem;
     }
 
-    .cardsContainer{
-        padding: 2rem 0;
+    .card {
+        width: 10rem;
     }
 
     .icon-and-text {
         scale: 20%;
     }
 
-    .icon-and-text > h5 {
+    /* .icon-and-text > h5 {
         font-size: 4rem;
+    } */
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .cardsContainer{
+        gap: 0.5rem;
+    }
+
+    .card {
+        width: 12.5rem;
+    }
+
+    .icon-and-text {
+        scale: 25%;
+    }
+
+    /* .icon-and-text > h5 {
+        font-size: 4rem;
+    } */
+
+    .card:hover {
+        transform: scale(1.05);
     }
 }
