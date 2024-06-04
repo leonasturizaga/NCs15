@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Input from '../components/Input';
+// import Input from '../components/Input';
 import './css/login.css';
 import imgLogin from '../assets/portada-login.png'
 

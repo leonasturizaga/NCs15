@@ -17,6 +17,7 @@ import PetCard from './pages/PetCard';
 
 // Images
 import pathLogo from "./assets/LogoPetDocs.png";
+import pathLogo from "./assets/LogoPetDocs.png";
 import pathYellowCircle from "./assets/yellow_circle_.png";
 import pathOrangeCircle from "./assets/orange_circle_.png";
 import pathRedCircle from "./assets/red_circle_.png";
