@@ -1,26 +1,4 @@
-// import React from 'react';
-
-// const Register = () => (
-//   <div>
-//     <h2>Register</h2>
-//     <form>
-//       <label>
-//         Username:
-//         <input type="text" name="username" />
-//       </label>
-//       <label>
-//         Password:
-//         <input type="password" name="password" />
-//       </label>
-//       <button type="submit">Register</button>
-//     </form>
-//   </div>
-// );
-
-// export default Register;
-
-
-import React, { useState } from 'react';
+import { React, useState } from 'react';
 import Input from '../components/Input';
 import './css/register.css';
 import imgRegistro from '../assets/portada-registro.png'
@@ -94,7 +72,7 @@ const Register = () => {
   };
 
   return (
-    <div className="container">
+    <div className="register-container">
       <div className="image-container">
         <img src={imgRegistro}/>
       </div>

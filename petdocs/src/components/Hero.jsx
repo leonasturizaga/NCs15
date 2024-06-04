@@ -1,6 +1,8 @@
+import React from 'react';
 import './css/Hero.css';
 import ImagenHero from '../assets/PetDocs_foto2.png';
-const Hero = () => {
+
+const Hero = ({ onRegisterClick,onLoginClick }) => {
 
     return (
         <div className="hero">
@@ -19,8 +21,8 @@ const Hero = () => {
                     </div>
                     <p>"Todo el historial de tu mascota a un paso de distancia."</p>
                     <div className="hero-btns">
-                        <button className="btn-registrate">Registrate</button>
-                        <button className="btn-login">Iniciar Sesion</button>
+                        <button className="btn-registrate" onClick={onRegisterClick}>Registrate</button>
+                        <button className="btn-login" onClick={onLoginClick}>Iniciar Sesion</button>
                     </div>
                 </div>
             </div>
@@ -28,6 +30,6 @@ const Hero = () => {
 
     );
 
-}
+};
 
 export default Hero;
