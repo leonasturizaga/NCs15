@@ -2,8 +2,8 @@
 // src/App.jsx
 import React, { useState } from 'react';
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/js/bootstrap.min.js";
+// import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/js/bootstrap.min.js";
 
 // Components
 import Header from "./components/Header";
@@ -11,12 +11,11 @@ import Caracteristicas from "./components/Caracteristicas";
 import Hero from "./components/Hero";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
-import Register from "./components/Register"; 
-import Login from "./components/Login";
+// import Register from "./components/Register"; 
+// import Login from "./components/Login";
 import PetCard from './pages/PetCard'; 
 
 // Images
-import pathLogo from "./assets/LogoPetDocs.png";
 import pathLogo from "./assets/LogoPetDocs.png";
 import pathYellowCircle from "./assets/yellow_circle_.png";
 import pathOrangeCircle from "./assets/orange_circle_.png";
