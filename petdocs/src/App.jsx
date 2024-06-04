@@ -12,7 +12,8 @@ import Hero from "./components/Hero";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Register from "./components/Register"; 
-import Login from "./components/Login"; 
+import Login from "./components/Login";
+import PetCard from './pages/PetCard'; 
 
 // Images
 import pathLogo from "./assets/logo-with-name.jpeg";
@@ -73,6 +74,7 @@ function App() {
           <Hero onLoginClick={handleLoginClick} onRegisterClick={handleRegisterClick} />
           <Caracteristicas cardData={cards} />
           <Banner />
+          <PetCard />
         </>
       )}
 
