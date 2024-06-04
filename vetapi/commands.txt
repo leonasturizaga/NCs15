@@ -8,5 +8,7 @@ pip install psycopg2-binary
 pip install gunicorn
 pip install 'whitenoise[brotli]'
 
-
+... prueba para subir archivo a repo nuevo.
 ... fin
+
+en settings.py cambiar para local/implementar líneas 368/369 372/373 375/376 439/440

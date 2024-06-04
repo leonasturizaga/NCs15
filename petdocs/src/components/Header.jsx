@@ -1,11 +1,25 @@
-// Podría ir una carpeta en src llamada Header y que los componentes sean Logo y Navbar.
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+
+// const Navbar = () => (
+//   <nav>
+//     <ul>
+//       <li><Link to="/">Home</Link></li>
+//       <li><Link to="/register">Register</Link></li>
+//       <li><Link to="/login">Login</Link></li>
+//     </ul>
+//   </nav>
+// );
+
+// export default Navbar;
+
 //Hay un breve delay al scrollear, con el cambio de colores.
 
 import React, { useState, useEffect } from "react";
-// import "../App.css"; //necesario ???
-// import { Link } from "react-router-dom"; //<-- otro manejo para links.
+import "./css/Header.css";
+// import { Link } from "react-router-dom"; <-- otro manejo para links.
 
-function Header({ brandName, imageSrcPath, navItems }) {
+function Header({ brandName, pathLogo, navItems }) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [scrolled, setScrolled] = useState(false);
@@ -42,32 +56,32 @@ function Header({ brandName, imageSrcPath, navItems }) {
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img
-            src={imageSrcPath}
+            src={pathLogo}
             width="90"
             height="60"
-            className="d-inline-block align-center" //rounded
+            className="d-inline-block align-center rounded"
             // alt={"Logo de " + brandName}
             alt={`Logo de ${brandName}`}
           />
           {/* <span id="brandText" className="fw-bolder fs-4 navbar-text">{brandName}</span> */}
         </a>
         <button
-          // class="navbar-toggler btn btn-toggle btn-outline-light"
-          class="navbar-toggler"
+          // className="navbar-toggler btn btn-toggle btn-outline-light"
+          className="navbar-toggler"
           type="button"
           onClick={handleToggleCollapse}
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
         {/* con lo sgte, se podría prescindir de usar ul incluso */}
-        {/* <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
+        {/* <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav">
+            <a className="nav-item nav-link active" href="#">Home <span className="sr-only">(current)</span></a>
+            <a className="nav-item nav-link" href="#">Features</a>
+            <a className="nav-item nav-link" href="#">Pricing</a>
+            <a className="nav-item nav-link disabled" href="#">Disabled</a>
           </div>
         </div> */}
 

@@ -1,5 +1,5 @@
-/* 
 @import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Titan+One&display=swap');
+
 :root {
   --bg-color: #ddd;
   --color-text: #130101;
@@ -16,21 +16,5 @@
 
 body {
   margin: 0;
-  padding:0;
-} */
-
-@import url('https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Titan+One&display=swap');
-:root {
-  --bg-color: #ddd;
-  --color-text: #130101;
-  --color-secondary: #ff914d;
-  --color-tertiary:#ff5757;
-  --color-btn:#ff443a;
-  --font-text: 'Open Sans', sans-serif;
-  --font-title: 'Grandstander', sans-serif;
-  --font-brand: 'Titan One', sans-serif;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-
+  padding: 6rem 0;
 }
