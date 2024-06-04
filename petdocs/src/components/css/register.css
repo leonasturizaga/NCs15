@@ -7,7 +7,7 @@
   } */
   
   label {
-    color: black;
+    color: var(--font-text);
     text-align: left;
     margin: 13px;
     width: 25vh;
