@@ -23,13 +23,13 @@ export default function PetCard() {
 
     return (
         <div className="container-petcard">
-            <div className="card-petcard">
+            <div className="card-pet">
                 <img src={ImagenPetcard} alt="petcard" />
                 <div className="pet_picture">
                     <img src={pet.pet_picture} alt="imagen_de_mascota" />
                 </div>
 
-                <form>
+                <form className="petform">
                     <h3>{pet.name}</h3>
                     <label>Nacimiento</label>
                     <input
