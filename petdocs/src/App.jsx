@@ -11,11 +11,12 @@ import Caracteristicas from "./components/Caracteristicas";
 import Hero from "./components/Hero";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
-import Register from "./components/Register"; 
-import Login from "./components/Login"; 
+import Register from "./pages/Register"; 
+import Login from "./pages/Login";
+import PetCard from "./pages/PetCard"; 
 
 // Images
-import pathLogo from "./assets/logo-with-name.jpeg";
+import pathLogo from "./assets/LogoPetDocs.png";
 import pathYellowCircle from "./assets/yellow_circle_.png";
 import pathOrangeCircle from "./assets/orange_circle_.png";
 import pathRedCircle from "./assets/red_circle_.png";
@@ -69,16 +70,18 @@ function App() {
       {currentPage === "Login" && <Login />}
       {currentPage === "Register" && <Register />}
       {currentPage === "home" && (
-          <>
+        <>
           <Hero onLoginClick={handleLoginClick} onRegisterClick={handleRegisterClick} />
           <Caracteristicas cardData={cards} />
           <Banner />
+          <PetCard />
         </>
       )}
 
       <Footer />
     </>
-  );
+
+);
 }
 
 export default App;
