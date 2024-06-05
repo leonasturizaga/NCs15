@@ -2,8 +2,8 @@
 // src/App.jsx
 import React, { useState } from 'react';
 import "./App.css";
-// import "bootstrap/dist/css/bootstrap.css";
-// import "bootstrap/dist/js/bootstrap.min.js";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.min.js";
 
 // Components
 import Header from "./components/Header";
@@ -11,9 +11,9 @@ import Caracteristicas from "./components/Caracteristicas";
 import Hero from "./components/Hero";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
-// import Register from "./components/Register"; 
-// import Login from "./components/Login";
-import PetCard from './pages/PetCard'; 
+import Register from "./pages/Register"; 
+import Login from "./pages/Login";
+import PetCard from "./pages/PetCard"; 
 
 // Images
 import pathLogo from "./assets/LogoPetDocs.png";
@@ -25,7 +25,7 @@ import pathAgenda from "./assets/icon_agenda.png";
 import pathPen from "./assets/icon_lapiz.png";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState("home");
+  const [currentPage,setCurrentPage] = useState("home");
 
   // Handler to show the Register component
   const handleRegisterClick = () => {
@@ -74,11 +74,11 @@ function App() {
           <Hero onLoginClick={handleLoginClick} onRegisterClick={handleRegisterClick} />
           <Caracteristicas cardData={cards} />
           <Banner />
+          <PetCard />
         </>
       )}
 
       <Footer />
-      <PetCard />
     </>
 
 );

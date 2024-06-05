@@ -1,79 +1,73 @@
+// src/LoginForm.jsx
 import React, { useState } from 'react';
-// import Input from '../components/Input';
+import axios from 'axios';
 import './css/login.css';
-import imgLogin from '../assets/portada-login.png'
+
 
 const Login = () => {
-  const [nick, setNick] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
-  const handleNickChange = (e) => {
-    setNick(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); 
-  
-    const formData = {
-      nick: nick,
-      password: password
-    };
-  
+    e.preventDefault();
+    setLoading(true);
+    setError('');
+
     try {
-      const response = await fetch("https://ncs15-petdocs-api.onrender.com/validate_owner/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+      const response = await axios.post('https://ncs15-petdocs-api.onrender.com/validate_owner/', {
+        username,
+        password
       });
-  
-      if (response.ok) {
-        const responseData = await response.json();
-        localStorage.setItem("user", JSON.stringify(responseData.user));
-          setTimeout(() => {
-            window.location.href = "/";
-          }, 1000);
-      } else {
-        console.error("Error al iniciar sesión");
-      }
+
+      console.log(response.data);
+
     } catch (error) {
-      console.error("Error en la solicitud:", error);
+      setError('Login failed. Please check your credentials.');
+    } finally {
+      setLoading(false);
     }
   };
-  
-  
 
   return (
-    <div className="container">
-      <div className="image-container">
-        <img src={imgLogin}/>
-      </div>
-      <div className="form-container">
+    <div  >
+      
+      <div >
+      <h3 class="fs-1">Login</h3>
+      <p>Si aun no te Registraste, podes hacerlo <a href="#" class="link-warning">acá</a></p>
+
       <form onSubmit={handleSubmit}>
-        <Input
-          label="Usuario"
-          type="user"
-          value={nick}
-          onChange={handleNickChange}
-          className='inputs'
-        />
-        <Input
-          label="Contraseña"
-          type="password"
-          value={password}
-          onChange={handlePasswordChange}
-          className='inputs'
-        />
-        <button type="submit" className='btn-login'>Enviar</button>
+        <div >
+          <label className="form-label">Username:</label>
+          <input
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label className="form-label">Password:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+        </div>
+        <br></br>
+        <div>
+          <button type="submit" disabled={loading} className="btn-login">
+            {loading ? 'Logging in...' : 'Login'}
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+          </button>
+        </div>
+
       </form>
       </div>
     </div>
   );
-}
+};
 
 export default Login;
