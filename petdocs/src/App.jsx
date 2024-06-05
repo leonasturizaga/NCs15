@@ -5,6 +5,9 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
+//  import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+
 // Components
 import Header from "./components/Header";
 import Caracteristicas from "./components/Caracteristicas";
@@ -79,7 +82,16 @@ function App() {
       )}
 
       <Footer />
+
+      {/* <Router>
+      <Switch>
+        <Route path="./pages/Register" component={Register} />
+        <Route path="./pages/Login" component={Login} />
+      </Switch>
+    </Router> */}
     </>
+
+
 
 );
 }
