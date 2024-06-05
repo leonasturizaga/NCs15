@@ -120,7 +120,6 @@ import axios from 'axios';
 import './css/register.css';
 import imgRegistro from '../assets/portada-registro.png'
 
-
 const Register = () => {
   const [formData, setFormData] = useState({
     username: '',
@@ -192,17 +191,15 @@ const Register = () => {
     }
   };
 
-
-
   return (
     <div className="register-container">
       <div >
         <img src={imgRegistro}/>
       </div>
       <div >
-      
       <h3 class="fs-1">Registrate</h3>
       <p>Si ya estas registrado, inicia sesion <a href="#" class="link-warning">acá</a></p>
+
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         <div>
           <label>Username:</label>
@@ -258,6 +255,7 @@ const Register = () => {
         {error && <p style={{ color: 'red' }}>{error}</p>}
         {success && <p style={{ color: 'green' }}>{success}</p>}
       </form>
+
       </div>
     </div>
   );
