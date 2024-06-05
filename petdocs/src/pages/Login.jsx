@@ -27,16 +27,21 @@ const Login = () => {
       }
     } catch (error) {
       console.error('Error:', error);
-      setResponseMessage({ message: 'An error occurred. Please try again.', color: 'red' });
+      setResponseMessage({ message: 'Error, por favor intente nuevamente.', color: 'red' });
     }
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="register-container">
+    <div >
+      <img src=""/>
+    </div>
+    <div >
+    <h3 class="fs-1">Login</h3>
+      <p>Si aún no te regsitraste, podes hacerlo <a href="/">acá!</a>.</p>
       <form onSubmit={handleLogin}>
         <div>
-          <label>Username:</label>
+          <label>Usuario:</label>
           <input
             type="text"
             id="loginNick"
@@ -60,6 +65,7 @@ const Login = () => {
       {responseMessage && (
         <p style={{ color: responseMessage.color }}>{responseMessage.message}</p>
       )}
+      </div>
     </div>
   );
 };

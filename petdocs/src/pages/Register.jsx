@@ -213,7 +213,7 @@ const validateForm = () => {
     </div>
     <div >
     <h3 class="fs-1">Registrate</h3>
-      <p>If you already have an account, please <a href="/login">login here</a>.</p>
+      <p>¿Ya estas registrado? Inicia sesión <a href="/">acá!</a></p>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Username:</label>
