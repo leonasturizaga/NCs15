@@ -15,10 +15,9 @@ import Footer from '../components/Footer';
 const Home = () => {
   return (
     <div>
-
-
-<Caracteristicas />
-<PetCard />
+      <h3 className="title-h1">PetDocs home</h3>
+      <Caracteristicas />
+      <PetCard />
     </div>
 
   );
