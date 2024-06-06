@@ -32,39 +32,39 @@ const Login = () => {
   };
 
   return (
-    <div className="register-container">
-    <div >
-      <img src=""/>
-    </div>
-    <div >
-    <h3 class="fs-1">Login</h3>
-      <p>Si aún no te regsitraste, podes hacerlo <a href="/">acá!</a>.</p>
-      <form onSubmit={handleLogin}>
-        <div>
-          <label>Usuario:</label>
-          <input
-            type="text"
-            id="loginNick"
-            value={nick}
-            onChange={(e) => setNick(e.target.value)}
-            required
-          />
+    <div className="hero">
+      <div className="container-hero">
+
+      <div className="hero-info" >
+          <h3 className="title-h1">Login</h3>
+          <p>Si aún no te regsitraste, puedes hacerlo <p>&nbsp;</p><a href="/">acá!</a>.</p>
+          <form onSubmit={handleLogin}>
+            <div>
+              <label>Usuario:</label>
+              <input
+                type="text"
+                id="loginNick"
+                value={nick}
+                onChange={(e) => setNick(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <label>Password:</label>
+              <input
+                type="password"
+                id="loginPassword"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            <button type="submit" className="btn-login">Iniciar Sesión</button>
+          </form>
+          {responseMessage && (
+            <p style={{ color: responseMessage.color }}>{responseMessage.message}</p>
+          )}
         </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            id="loginPassword"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit">Login</button>
-      </form>
-      {responseMessage && (
-        <p style={{ color: responseMessage.color }}>{responseMessage.message}</p>
-      )}
       </div>
     </div>
   );
