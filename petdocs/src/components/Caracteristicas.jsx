@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/Caracteristicas.css";
 
-function Caracteristicas({ cardData }) {
+const Caracteristicas = ({ cardData }) => {
   // Clases image-overlay y overlay-image no parecen hacer nada.
   return (
     <div className="cardsContainer">
@@ -30,32 +30,5 @@ function Caracteristicas({ cardData }) {
     </div>
   );
 }
-
-// function Caracteristicas({ cardData }) {
-//   // Clases image-overlay y overlay-image no parecen hacer nada.
-//   return (
-//     <div className="cardsContainer">
-//       {cardData.map((data, index) => (
-//         <a href={data.link}>
-//           <div className="card" key={index}>
-//             <div className="image-overlay imageContainer">
-//               <img
-//                 src={data.background}
-//                 className="card-img-top"
-//                 alt="Background"
-//               />
-//               <img
-//                 src={data.icon}
-//                 className="overlay-image imageIcon"
-//                 alt="Icon"
-//               />
-//             </div>
-//             <h5 className="card-title">{data.title}</h5>
-//           </div>
-//         </a>
-//       ))}
-//     </div>
-//   );
-// }
 
 export default Caracteristicas;
