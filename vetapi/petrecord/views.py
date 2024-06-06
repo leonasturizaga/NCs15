@@ -45,6 +45,26 @@ class EventRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = Event.objects.all()
     serializer_class = EventSerializer
 
+''' Inicio agregado vistas'''
+
+class OwnerPetsView(generics.ListAPIView):
+    serializer_class = PetSerializer
+
+    def get_queryset(self):
+        owner_nick = self.kwargs['owner_nick']
+        pet_ids = Owner_Pet.objects.filter(owner_nick__nick=owner_nick).values_list('pet_id', flat=True)
+        return Pet.objects.filter(id__in=pet_ids)
+
+class OwnerPetsEventsView(generics.ListAPIView):
+    serializer_class = EventSerializer
+
+    def get_queryset(self):
+        owner_nick = self.kwargs['owner_nick']
+        pet_ids = Owner_Pet.objects.filter(owner_nick__nick=owner_nick).values_list('pet_id', flat=True)
+        return Event.objects.filter(pet_id__in=pet_ids)
+
+'''Fin agregado vistas'''
+
 @csrf_exempt
 def validate_owner(request):
     if request.method == 'POST':
@@ -153,3 +173,31 @@ def create_pet(request, nick):
                 "Owner_Pet Errors": owner_pet_serializer.errors}, status=400)
     except Exception as e:
             return JsonResponse({'error': str(e)}, status=500) 
+
+@method_decorator(csrf_exempt, name='dispatch')
+class PetImageUploadView(View):
+    def post(self, request, pet_id):
+        file = request.FILES.get('file')
+        if not file:
+            return JsonResponse({'error': 'No file provided'}, status=400)
+        
+         # Validate MIME type
+        if file.content_type not in ALLOWED_IMAGE_MIME_TYPES:
+            return JsonResponse({'error': 'Unsupported file type. Please upload an image.'}, status=400)
+        
+        # Validate file extension
+        ext = mimetypes.guess_extension(file.content_type)
+        if ext not in ALLOWED_IMAGE_EXTENSIONS:
+            return JsonResponse({'error': 'Unsupported image extension. Please upload a .jpg or a .png image.'}, status=400)
+
+        try:
+            upload_result = upload(file)
+            pet = get_object_or_404(Pet, pk=pet_id) 
+            pet.pet_picture =  upload_result['url']
+            pet.save()
+            return JsonResponse({
+                'message': 'Upload successful',
+                'url': upload_result['url']
+            }, status=201)
+        except Exception as e:
+            return JsonResponse({'error': str(e)}, status=500)
