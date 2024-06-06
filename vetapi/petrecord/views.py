@@ -45,6 +45,26 @@ class EventRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = Event.objects.all()
     serializer_class = EventSerializer
 
+''' Inicio agregado vistas'''
+
+class OwnerPetsView(generics.ListAPIView):
+    serializer_class = PetSerializer
+
+    def get_queryset(self):
+        owner_nick = self.kwargs['owner_nick']
+        pet_ids = Owner_Pet.objects.filter(owner_nick__nick=owner_nick).values_list('pet_id', flat=True)
+        return Pet.objects.filter(id__in=pet_ids)
+
+class OwnerPetsEventsView(generics.ListAPIView):
+    serializer_class = EventSerializer
+
+    def get_queryset(self):
+        owner_nick = self.kwargs['owner_nick']
+        pet_ids = Owner_Pet.objects.filter(owner_nick__nick=owner_nick).values_list('pet_id', flat=True)
+        return Event.objects.filter(pet_id__in=pet_ids)
+
+'''Fin agregado vistas'''
+
 @csrf_exempt
 def validate_owner(request):
     if request.method == 'POST':
