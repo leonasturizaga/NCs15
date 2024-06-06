@@ -8,11 +8,11 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views import View
 from django.shortcuts import get_object_or_404
-from .models import Owner, Pet, Owner_Pet
 from cloudinary.uploader import upload
 from django.utils.decorators import method_decorator
 import json
 import mimetypes
+from rest_framework.views import APIView
 
 # Allowed MIME types and extensions
 ALLOWED_IMAGE_MIME_TYPES = [
@@ -174,9 +174,25 @@ def create_pet(request, nick):
     except Exception as e:
             return JsonResponse({'error': str(e)}, status=500) 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @method_decorator(csrf_exempt, name='dispatch')
-class PetImageUploadView(View):
-    def post(self, request, pet_id):
+class PetImageUploadView(APIView):
+    def post(self, request, nick, pet_name):
         file = request.FILES.get('file')
         if not file:
             return JsonResponse({'error': 'No file provided'}, status=400)
@@ -189,15 +205,27 @@ class PetImageUploadView(View):
         ext = mimetypes.guess_extension(file.content_type)
         if ext not in ALLOWED_IMAGE_EXTENSIONS:
             return JsonResponse({'error': 'Unsupported image extension. Please upload a .jpg or a .png image.'}, status=400)
-
         try:
             upload_result = upload(file)
-            pet = get_object_or_404(Pet, pk=pet_id) 
-            pet.pet_picture =  upload_result['url']
-            pet.save()
-            return JsonResponse({
-                'message': 'Upload successful',
-                'url': upload_result['url']
-            }, status=201)
+            owner = get_object_or_404(Owner, pk=nick)
+            print(owner)
+            owner_pet = Owner_Pet.objects.filter(owner_nick=nick)
+            owner_pet_serializer = OwnerPetSerializer(owner_pet, many=True)
+            user_pets= []
+            for owner_pet_elem in owner_pet_serializer.data:
+                user_pets.append(owner_pet_elem['pet_id'])
+            print(user_pets)
+            for pet_element in user_pets:
+                pet = Pet.objects.get(pk=pet_element)
+                print(pet.name)
+                if pet.name == pet_name:
+                    print('found!')
+                    pet.pet_picture = upload_result['url']
+                    pet.save()
+                    return JsonResponse({
+                   'message': 'Upload successful',
+                   'url': upload_result['url']
+                      }, status=201)
+            return JsonResponse({'error': 'The Pet was not found'}, status=404)
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=500)
