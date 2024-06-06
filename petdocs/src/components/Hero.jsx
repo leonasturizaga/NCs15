@@ -21,8 +21,8 @@ const Hero = ({ onRegisterClick,onLoginClick }) => {
                     </div>
                     <p>"Todo el historial de tu mascota a un paso de distancia."</p>
                     <div className="hero-btns">
-                        <button className="btn-registrate" onClick={onRegisterClick}>Registrate</button>
-                        <button className="btn-login" onClick={onLoginClick}>Iniciar Sesion</button>
+                        <button className="btn-registrate" onClick={onRegisterClick}>Regístrate</button>
+                        <button className="btn-login" onClick={onLoginClick}>Iniciar Sesión</button>
                     </div>
                 </div>
             </div>
