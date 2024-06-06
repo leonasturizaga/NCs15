@@ -6,7 +6,7 @@
     position: absolute;
     overflow-x: hidden;
     width: 100vw;
-    height: 15vh;
+    height: 30vh;
     background-color: var(--color-tertiary);
     /* justify-content: space-evenly; */
 }
@@ -60,3 +60,5 @@
         padding: 5px;
     }
 }
+
+

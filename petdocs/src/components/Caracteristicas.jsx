@@ -1,6 +1,5 @@
 import React from "react";
 import "./css/Caracteristicas.css";
-import { Link } from 'react-router-dom';
 
 //Images
 import pathYellowCircle from "../assets/yellow_circle_.png";
@@ -14,21 +13,21 @@ let cards = [
   {
     id: "yellowCard",
     title: "Añadir mascota",
-    link: "/pet-form",
+    link: "",
     background: pathYellowCircle,
     icon: pathPen,
   },
   {
     id: "orangeCard",
     title: "Ver mascota",
-    link: "/pet-card",
+    link: "",
     background: pathOrangeCircle,
     icon: pathPaw,
   },
   {
     id: "redCard",
     title: "Crear recordatorio",
-    link: "/evento",
+    link: "",
     background: pathRedCircle,
     icon: pathAgenda,
   },
@@ -47,16 +46,26 @@ const Caracteristicas = () => {
             data.id == "redCard" ? 'red-border' : ''}`} key={index}>
             <div className="image-overlay imageContainer">
               <img
-                src={data.icon}
-                className="overlay-image imageIcon"
-                alt="Icon"
+                src={data.background}
+                //Cambiar el className usado en caso que se quiera ver más claro el fondo del círculo rojo (habilitar su correspondiente estilo también).
+                // className={`card-img-top ${data.id === "redCard" ? 'card-back-opacity' : ''}`}
+                className="card-img-top"
+                alt="Background"
               />
-              <h5 className="card-title">{data.title}</h5>
+              <div className="icon-and-text">
+                <img
+                  src={data.icon}
+                  className="overlay-image imageIcon"
+                  alt="Icon"
+                />
+                <h5 className="card-title">{data.title}</h5>
+              </div>
             </div>
           </div>
         </a>
-    ))}
-  </div>
-);
+      ))}
+    </div>
+  );
 }
+
 export default Caracteristicas;
