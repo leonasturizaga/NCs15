@@ -1,7 +1,6 @@
 
 // src/App.jsx
 import React, { useState } from 'react';
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
@@ -20,12 +19,6 @@ import PetCard from "./pages/PetCard";
 
 // Images
 import pathLogo from "./assets/LogoPetDocs.png";
-import pathYellowCircle from "./assets/yellow_circle_.png";
-import pathOrangeCircle from "./assets/orange_circle_.png";
-import pathRedCircle from "./assets/red_circle_.png";
-import pathPaw from "./assets/paw-icon2.png";
-import pathAgenda from "./assets/icon_agenda.png";
-import pathPen from "./assets/icon_lapiz.png";
 
 function App() {
   const [currentPage,setCurrentPage] = useState("home");
@@ -42,30 +35,6 @@ function App() {
   // Navbar buttons
   let items = ["Inicio", "Nosotros"];
 
-  let cards = [
-    {
-      id: "yellowCard",
-      title: "Añadir mascota",
-      link: "",
-      background: pathYellowCircle,
-      icon: pathPen,
-    },
-    {
-      id: "orangeCard",
-      title: "Ver mascota",
-      link: "",
-      background: pathOrangeCircle,
-      icon: pathPaw,
-    },
-    {
-      id: "redCard",
-      title: "Crear recordatorio",
-      link: "",
-      background: pathRedCircle,
-      icon: pathAgenda,
-    },
-  ];
-
   return (
     <>
       <Header brandName={"PetDocs"} pathLogo={pathLogo} navItems={items} />
@@ -75,7 +44,7 @@ function App() {
       {currentPage === "home" && (
         <>
           <Hero onLoginClick={handleLoginClick} onRegisterClick={handleRegisterClick} />
-          <Caracteristicas cardData={cards} />
+          <Caracteristicas />
           <Banner />
           <PetCard />
         </>
