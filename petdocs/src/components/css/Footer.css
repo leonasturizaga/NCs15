@@ -6,7 +6,7 @@
     position: absolute;
     overflow-x: hidden;
     width: 100vw;
-    height: 30vh;
+    height: 15vh;
     background-color: var(--color-tertiary);
 }
 .brand-footer a {

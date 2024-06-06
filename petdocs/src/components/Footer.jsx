@@ -10,11 +10,15 @@ const Footer = () => {
 
         <div className="container-footer">            
             <div className="brand-footer">
-                <a href="#">PetDocs</a>   
-            </div>            
+                <a href="/home">PetDocs</a>   
+            </div>     
+            <div className="">
+                <p ><a href="/Nosotros">Nosotros</a> </p>
+                <p>2024&#169;</p>  
+            </div>       
             <div className="redes-footer">
                 <div className="rs-footer">
-                   <a href="https://www.instagram.com/"> <img src={ImagenInstagram} alt="Instagram" /></a>
+                   <a href="https://www.instagram.com/petdocsapp"> <img src={ImagenInstagram} alt="Instagram" /></a>
                 </div>
                 <div className="rs-footer">
                    <a href="https://web.whatsapp.com/"> <img src={ImagenWhatsapp} alt="Whatsapp" /></a>

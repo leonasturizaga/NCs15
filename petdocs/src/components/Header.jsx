@@ -38,7 +38,7 @@ const Header = ({ brandName, pathLogo, navItems }) => {
   return (
     <nav className={`navbar fixed-top navbar-expand-md navbar-light shadow ${scrolled ? 'navbar-custom-bg-color' : 'bg-white'}`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           <img
             src={pathLogo}
             width="90"
