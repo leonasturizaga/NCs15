@@ -36,46 +36,16 @@ let cards = [
 
 const Caracteristicas = () => {
   // Clases image-overlay y overlay-image no parecen hacer nada.
-//   return (
-//     <div className="cardsContainer">
-//       {cards.map((data, index) => (
-//         <a href={data.link}>
-//           <div className="card" key={index}>
-//             <div className="image-overlay imageContainer">
-//               <img
-//                 src={data.background}
-//                 //Cambiar el className usado en caso que se quiera ver más claro el fondo del círculo rojo (habilitar su correspondiente estilo también).
-//                 // className={`card-img-top ${data.id === "redCard" ? 'card-back-opacity' : ''}`}
-//                 className="card-img-top"
-//                 alt="Background"
-//               />
-//               <div className="icon-and-text">
-//                 <img
-//                   src={data.icon}
-//                   className="overlay-image imageIcon"
-//                   alt="Icon"
-//                 />
-//                 <h5 className="card-title">{data.title}</h5>
-//               </div>
-//             </div>
-//           </div>
-//         </a>
-//       ))}
-//     </div>
-//   );
-// }
-return (
-  <div className="cardsContainer">
-    {cards.map((data, index) => (
-      <Link to={data.link} key={index}>
-        <div className="card">
-          <div className="image-overlay imageContainer">
-            <img
-              src={data.background}
-              className="card-img-top"
-              alt="Background"
-            />
-            <div className="icon-and-text">
+  return (
+    <div className="cardsContainer">
+      {cards.map((data, index) => (
+        <a href={data.link}>
+          {/* <div className="card" key={index}> */}
+          <div className={`card card-border 
+          ${data.id == "yellowCard" ? 'yellow-border' : 
+            data.id == "orangeCard" ? 'orange-border' : 
+            data.id == "redCard" ? 'red-border' : ''}`} key={index}>
+            <div className="image-overlay imageContainer">
               <img
                 src={data.icon}
                 className="overlay-image imageIcon"
@@ -84,8 +54,7 @@ return (
               <h5 className="card-title">{data.title}</h5>
             </div>
           </div>
-        </div>
-      </Link>
+        </a>
     ))}
   </div>
 );
