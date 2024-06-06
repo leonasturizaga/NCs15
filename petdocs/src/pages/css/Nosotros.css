@@ -1,0 +1,24 @@
+.container {
+    padding: 5%;
+}
+
+.title {
+    font-family: var(--font-title);
+    font-size: 3rem;
+    text-align: center;
+    color: var(--color-tertiary);
+    margin-bottom: 2rem;
+}
+
+p {
+    font-family: var(--font-text);
+    font-size: 1.1rem;
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+.negrita {
+    font-weight: bold;
+}

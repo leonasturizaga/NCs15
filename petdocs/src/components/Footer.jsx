@@ -14,17 +14,25 @@ const Footer = () => {
             </div>            
             <div className="redes-footer">
                 <div className="rs-footer">
-                   <a href="https://www.instagram.com/"> <img src={ImagenInstagram} alt="Instagram" /></a>
+                   <a href="#/"> <img src={ImagenInstagram} alt="Instagram" /></a>
                 </div>
                 <div className="rs-footer">
-                   <a href="https://web.whatsapp.com/"> <img src={ImagenWhatsapp} alt="Whatsapp" /></a>
+                   <a href="#/"> <img src={ImagenWhatsapp} alt="Whatsapp" /></a>
                 </div>
                 <div className="rs-footer">
-               <a href="mailto:petdocs@example.com"><img src={ImagenMail} alt="Mail" /></a>
+               <a href="#/"><img src={ImagenMail} alt="Mail" /></a>
                 </div>
+            </div>
+            <div className="break"></div>
+            <div className="copy-footer">
+                <p>&copy; 2024 PetDocs</p>
             </div>
         </div>
     )
 }
 
 export default Footer
+
+// https://www.instagram.com/
+// https://web.whatsapp.com/
+// mailto:petdocs@example.com
