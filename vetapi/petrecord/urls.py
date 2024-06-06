@@ -12,6 +12,6 @@ urlpatterns = [
     path('owner/<str:nick>/new_pet/', create_pet, name='create_pet'),
     path('events/', EventListCreate.as_view(), name='event-list-create'),
     path('events/<int:pk>/', EventRetrieveUpdateDestroy.as_view(), name='event-retrieve-update-destroy'),
-    path('pet_picture/<int:pet_id>/', PetImageUploadView.as_view(), name='pet_picture')
+    path('<str:nick>/<str:pet_name>/pet_picture/', PetImageUploadView.as_view(), name='pet_picture')
 
 ]
