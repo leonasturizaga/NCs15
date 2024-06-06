@@ -39,7 +39,11 @@ const Caracteristicas = () => {
     <div className="cardsContainer">
       {cards.map((data, index) => (
         <a href={data.link}>
-          <div className="card" key={index}>
+          {/* <div className="card" key={index}> */}
+          <div className={`card card-border 
+          ${data.id == "yellowCard" ? 'yellow-border' : 
+            data.id == "orangeCard" ? 'orange-border' : 
+            data.id == "redCard" ? 'red-border' : ''}`} key={index}>
             <div className="image-overlay imageContainer">
               <img
                 src={data.background}

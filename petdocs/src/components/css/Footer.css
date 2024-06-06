@@ -8,6 +8,7 @@
     width: 100vw;
     height: 30vh;
     background-color: var(--color-tertiary);
+    /* justify-content: space-evenly; */
 }
 .brand-footer a {
     font-family: var(--font-brand);
@@ -28,6 +29,12 @@
     width: 110px !important;
     padding: 0 30px;
 }
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
 /* corte responsivo */
 @media screen and (max-width: 576px){
     .redes-footer {

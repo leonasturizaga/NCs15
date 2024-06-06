@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import "./css/Header.css";
 
-const Header = ({ brandName, pathLogo, navItems }) => {
+const Header = ({ brandName, pathLogo, navItems, navActions }) => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [scrolled, setScrolled] = useState(false);
@@ -16,6 +16,7 @@ const Header = ({ brandName, pathLogo, navItems }) => {
   const handleNavItemClicked = (index) => {
     setSelectedIndex(index);
     setIsCollapsed(true); // Collapse the navbar after a nav item is clicked
+    navActions[index](); // Call the corresponding action
   };
 
   //Esto es para manejar el cambio de color del navbar al hacer scroll.
@@ -38,7 +39,7 @@ const Header = ({ brandName, pathLogo, navItems }) => {
   return (
     <nav className={`navbar fixed-top navbar-expand-md navbar-light shadow ${scrolled ? 'navbar-custom-bg-color' : 'bg-white'}`}>
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" onClick={() => navActions[0]()}>
           <img
             src={pathLogo}
             width="90"

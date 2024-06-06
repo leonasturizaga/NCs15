@@ -16,6 +16,7 @@ import Footer from "./components/Footer";
 import Register from "./pages/Register"; 
 import Login from "./pages/Login";
 import PetCard from "./pages/PetCard"; 
+import Nosotros from './pages/Nosotros';
 
 // Images
 import pathLogo from "./assets/LogoPetDocs.png";
@@ -32,15 +33,25 @@ function App() {
     setCurrentPage("Login");
   };
 
+  const handleHomeClick = () => {
+    setCurrentPage("home");
+  };
+
+  const handleNosotrosClick = () => {
+    setCurrentPage("nosotros");
+  };
+
   // Navbar buttons
   let items = ["Inicio", "Nosotros"];
+  let itemsActions = [handleHomeClick, handleNosotrosClick];
 
   return (
     <>
-      <Header brandName={"PetDocs"} pathLogo={pathLogo} navItems={items} />
+      <Header brandName={"PetDocs"} pathLogo={pathLogo} navItems={items} navActions={itemsActions} />
 
       {currentPage === "Login" && <Login />}
       {currentPage === "Register" && <Register />}
+      {currentPage === "nosotros" && <Nosotros />}
       {currentPage === "home" && (
         <>
           <Hero onLoginClick={handleLoginClick} onRegisterClick={handleRegisterClick} />
