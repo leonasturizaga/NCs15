@@ -1,25 +1,9 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-
-// const Navbar = () => (
-//   <nav>
-//     <ul>
-//       <li><Link to="/">Home</Link></li>
-//       <li><Link to="/register">Register</Link></li>
-//       <li><Link to="/login">Login</Link></li>
-//     </ul>
-//   </nav>
-// );
-
-// export default Navbar;
-
 //Hay un breve delay al scrollear, con el cambio de colores.
 
 import React, { useState, useEffect } from "react";
 import "./css/Header.css";
-// import { Link } from "react-router-dom"; <-- otro manejo para links.
 
-function Header({ brandName, pathLogo, navItems }) {
+const Header = ({ brandName, pathLogo, navItems }) => {
   const [selectedIndex, setSelectedIndex] = useState(-1);
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [scrolled, setScrolled] = useState(false);
@@ -60,30 +44,17 @@ function Header({ brandName, pathLogo, navItems }) {
             width="90"
             height="60"
             className="d-inline-block align-center rounded"
-            // alt={"Logo de " + brandName}
             alt={`Logo de ${brandName}`}
           />
-          {/* <span id="brandText" className="fw-bolder fs-4 navbar-text">{brandName}</span> */}
         </a>
         <button
-          // className="navbar-toggler btn btn-toggle btn-outline-light"
-          className="navbar-toggler"
+          className={`navbar-toggler ${scrolled ? 'navbar-custom-toggler' : ''}`}
           type="button"
           onClick={handleToggleCollapse}
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className={`navbar-toggler-icon ${scrolled ? 'navbar-custom-toggler-icon' : ''}`}></span>
         </button>
-
-        {/* con lo sgte, se podría prescindir de usar ul incluso */}
-        {/* <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <a className="nav-item nav-link active" href="#">Home <span className="sr-only">(current)</span></a>
-            <a className="nav-item nav-link" href="#">Features</a>
-            <a className="nav-item nav-link" href="#">Pricing</a>
-            <a className="nav-item nav-link disabled" href="#">Disabled</a>
-          </div>
-        </div> */}
 
         <div className={`collapse justify-content-end navbar-collapse ${isCollapsed ? '' : 'show'}`}>
           <ul className="navbar-nav align-items-center mr-auto mb-2 mb-md-1">
