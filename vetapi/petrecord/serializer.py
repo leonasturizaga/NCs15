@@ -41,7 +41,7 @@ class EventSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Event
-        fields = '__all__'        before 6/6
+        fields = '__all__'
         #fields = ['id', 'pet_id', 'pet_name', 'title', 'description', 'startdate', 'enddate', 'url', 'duracion', 'falta']
 
     def get_duracion(self, obj):
