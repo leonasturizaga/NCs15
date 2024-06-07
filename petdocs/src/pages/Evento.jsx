@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import "./css/Evento.css";
 
-const baseURL = "https://ncs15-petdocs-api.onrender.com/events/";
+const baseURL = "https://ncs15-petdocs-api.onrender.com/events";
 
 export default function Evento() {
   const [evento, setEvento] = React.useState(null);
@@ -21,7 +21,7 @@ export default function Evento() {
   function createEvento() {
     axios
       .post(baseURL, {
-        pet_id: " ",
+        pet_name: " ",
         title: " ",
         description: " ",
         startdate: "	",
@@ -48,14 +48,14 @@ return (
       <div className="row">
         <div className="col-25">
           <label className="evento-label"
-            htmlFor="pet_id">Mascota</label>
+            htmlFor="pet_name">Mascota</label>
         </div>
         <div className="col-75">
           <input className="evento-input"
             type="text"
-            name="pet_id"
+            name="pet_name"
             id="pet_id"
-            defaultValue={evento.pet_id} />
+            defaultValue={evento.pet_name} />
         </div>
       </div>
       <div className="row">
