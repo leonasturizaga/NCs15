@@ -101,7 +101,7 @@ const EventoForm = () => {
           <div className="col-25">
             <label className='evento-label'>Archivos</label>
           </div>
-          <div className="row-75">
+          <div className="col-75">
             <input className='evento-input' type="file" id="url" accept='jpg,png' placeholder="Archivos jpg, png" />
           </div>
         </div>
