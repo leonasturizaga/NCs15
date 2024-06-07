@@ -1,6 +1,5 @@
-import axios from "axios";
-import React from "react";
-import { useContext } from 'react';
+import axios from 'axios';
+import React, { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
 import "./css/Evento.css";
 

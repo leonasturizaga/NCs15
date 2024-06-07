@@ -113,15 +113,10 @@
 // }
 
 
-
-//*************** opcion 1 ******************* */
-
-// src/pages/PetForm.jsx
-import { useContext } from 'react';
+//********************************** version 2 ************* */
+import { useContext, useState } from 'react';
 import { UserContext } from '../context/UserContext';
 import axios from "axios";
-import { useLocation } from 'react-router-dom';
-import React, { useState, useEffect } from "react";
 import ImagenPetcard from "../assets/pet-card.png";
 import './css/PetForm.css';
 
@@ -162,13 +157,11 @@ const PetForm = () => {
         formData.append('chip', pet.chip);
         formData.append('breed', pet.breed);
         formData.append('pet_picture', pet.pet_picture);
-console.log(formData);
         try {
             const response = await axios.post(baseURLpost, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
-                },
-                
+                }
             });
             setPet({
                 name: "",
@@ -241,7 +234,7 @@ console.log(formData);
                                     value={true}
                                     checked={pet.chip === true}
                                     onChange={() => setPet(prevState => ({ ...prevState, chip: true }))}
-                                    // required
+                                    
                                 /> Si
                             </label>
                             <label htmlFor="chip-no">
@@ -251,7 +244,7 @@ console.log(formData);
                                     value={false}
                                     checked={pet.chip === false}
                                     onChange={() => setPet(prevState => ({ ...prevState, chip: false }))}
-                                    // required
+                                    
                                 /> No
                             </label>
                         </div>
@@ -261,7 +254,7 @@ console.log(formData);
                                 type="file"
                                 name="pet_picture"
                                 onChange={handleChange}
-                                // required
+                                
                             />
                         </div>
                         <button type="submit" className="btn-login">Create Pet</button>
