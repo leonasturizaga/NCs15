@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
 import "./css/Evento.css";
-
+// ********************no usar este jsx reemplazar por EventoForm y a ese archivo no modificarlo********************
 const baseURL = "https://ncs15-petdocs-api.onrender.com/events/";
 // const { nick } = useContext(UserContext);
 
