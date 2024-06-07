@@ -80,15 +80,73 @@
 
 
 
-//********************** opcion 1 ********** */
+// //********************** opcion 1 ********** */
 
-// src/App.jsx
-import React, { useState } from 'react';
+// // src/App.jsx
+// import React, { useState } from 'react';
+// import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/js/bootstrap.min.js";
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+// // Components
+// import Header from "./components/Header";
+// import Caracteristicas from "./components/Caracteristicas";
+// import Hero from "./components/Hero";
+// import Banner from "./components/Banner";
+// import Footer from "./components/Footer";
+// import Register from "./pages/Register"; 
+// import Login from "./pages/Login";
+// import PetCard from "./pages/PetCard"; 
+// import PetForm from "./pages/PetForm";
+// import Evento from "./pages/Evento";
+// import Nosotros from "./pages/Nosotros";
+// import Home from "./pages/Home";
+
+// // Images
+// import pathLogo from "./assets/LogoPetDocs.png";
+
+// const App = () => {
+  
+//   return (
+//     <Router>
+//       <Header brandName={"PetDocs"} pathLogo={pathLogo} navItems={["Inicio", "Nosotros"]} />
+      
+//       <Routes>
+//         <Route path="/login" element={<Login />} />
+//         <Route path="/register" element={<Register />} />
+//         <Route path="/pet-form" element={<PetForm />} />
+//         <Route path="/pet-card" element={<PetCard />} />
+//         <Route path="/evento" element={<Evento />} />
+//         <Route path="/home" element={<Home/>} />
+//         <Route path="/nosotros" element={<Nosotros/>} />
+//         <Route path="/" element={
+//           <>
+//             <Hero />
+//             <Caracteristicas />
+//             <Banner />
+//             <PetCard />
+//           </>
+//         } />
+//       </Routes>
+      
+//       <Footer />
+//     </Router>
+//   );
+// }
+
+// export default App;
+
+
+
+//******************************** opcion 2 ******************** */
+import React from 'react';
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 // Context
 import { UserProvider } from './context/UserContext';
+
 // Components
 import Header from "./components/Header";
 import Caracteristicas from "./components/Caracteristicas";
@@ -107,34 +165,32 @@ import Home from "./pages/Home";
 import pathLogo from "./assets/LogoPetDocs.png";
 
 const App = () => {
-  
   return (
-    <UserProvider>  
-    <Router>
-      <Header brandName={"PetDocs"} pathLogo={pathLogo} navItems={["Inicio", "Nosotros"]} />
-      
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/pet-form" element={<PetForm />} />
-        <Route path="/pet-card" element={<PetCard />} />
-        <Route path="/evento" element={<Evento />} />
-        <Route path="/home" element={<Home/>} />
-        <Route path="/nosotros" element={<Nosotros/>} />
-        <Route path="/" element={
-          <>
-            <Hero />
-            <Caracteristicas />
-            <Banner />
-            <PetCard />
-          </>
-        } />
-      </Routes>
-      
-      <Footer />
-    </Router>
-    </UserProvider>  
+    <UserProvider>
+      <Router>
+        <Header brandName={"PetDocs"} pathLogo={pathLogo} navItems={["Inicio", "Nosotros"]} />
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/pet-form" element={<PetForm />} />
+          <Route path="/pet-card" element={<PetCard />} />
+          <Route path="/evento" element={<Evento />} />
+          <Route path="/home" element={<Home/>} />
+          <Route path="/nosotros" element={<Nosotros/>} />
+          <Route path="/" element={
+            <>
+              <Hero />
+              <Caracteristicas />
+              <Banner />
+              <PetCard />
+            </>
+          } />
+        </Routes>
+        <Footer />
+      </Router>
+    </UserProvider>
   );
 }
 
 export default App;
+
