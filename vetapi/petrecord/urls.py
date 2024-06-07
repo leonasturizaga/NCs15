@@ -15,6 +15,6 @@ urlpatterns = [
     path('events/<int:pk>/', EventRetrieveUpdateDestroy.as_view(), name='event-retrieve-update-destroy'),
     path('owner/<str:owner_nick>/pets/', OwnerPetsView.as_view(), name='owner-pets'), # nueva ruta para ver mascotas x nick
     path('owner/<str:owner_nick>/events/', OwnerPetsEventsView.as_view(), name='owner-pets-events'), # nueva ruta para ver eventos x nick
-    path('pet_picture/<int:pet_id>/', PetImageUploadView.as_view(), name='pet_picture')
+    path('<str:nick>/<str:pet_name>/pet_picture/', PetImageUploadView.as_view(), name='pet_picture')
 
 ]

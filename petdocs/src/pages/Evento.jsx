@@ -1,8 +1,10 @@
-import axios from "axios";
-import React from "react";
+import axios from 'axios';
+import React, { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 import "./css/Evento.css";
 
 const baseURL = "https://ncs15-petdocs-api.onrender.com/events/";
+// const { nick } = useContext(UserContext);
 
 export default function Evento() {
   const [evento, setEvento] = React.useState(null);

@@ -1,11 +1,14 @@
 // src/components/Register.jsx
 import React, { useState } from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './css/register.css';
 import imgRegistro from '../assets/portada-registro.png'
 
 const Register = () => {
-  const [nick, setNick] = useState('');
+   const [nick, setNick] = useState('');
   const [password, setPassword] = useState('');
   //adding
   const [repeatPassword, setRepeatPassword] = useState('');
@@ -75,7 +78,7 @@ const Register = () => {
         </div>
         <div className="hero-info" >
           <h3 className="title-h1">Registrate</h3>
-          <p>¿Yá estas registrado? Inicia sesión <a href="https://ncs15-petdocs-app.vercel.app/">&nbsp; acá!</a></p>
+          <p>¿Yá estas registrado? Inicia sesión <Link to="/Login">&nbsp; acá!</Link></p>
           <form onSubmit={handleSubmit}>
             <div>
               <label>Usuario:</label>
