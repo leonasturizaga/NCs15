@@ -167,15 +167,9 @@
 //**************************** opcion 2 ****************** */
 
 // src/components/Header.jsx
-<<<<<<< HEAD
 import React, { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
 import { useState, useEffect } from 'react';
-=======
-import React, { useState, useEffect } from "react";
-import { useContext } from 'react';
-import { UserContext } from '../context/UserContext';
->>>>>>> bc9bf644c69cda11509cafef2fbff7997a4c45d6
 import { useNavigate } from 'react-router-dom';
 import "./css/Header.css";
 
@@ -186,8 +180,6 @@ const Header = ({ brandName, pathLogo, navItems }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
-  const { nick } = useContext(UserContext);
-
 
   const handleToggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
@@ -241,11 +233,7 @@ const Header = ({ brandName, pathLogo, navItems }) => {
         <div className={`collapse justify-content-end navbar-collapse ${isCollapsed ? '' : 'show'}`}>
           <ul className="navbar-nav align-items-center mr-auto mb-2 mb-md-1">
             <li>
-<<<<<<< HEAD
             <p className='text-banner'>Nick: {nick}</p>
-=======
-            <p className='text-banner'> {nick}</p>
->>>>>>> bc9bf644c69cda11509cafef2fbff7997a4c45d6
             </li>
             {navItems.map((item, index) => (
               <li

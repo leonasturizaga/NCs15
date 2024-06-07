@@ -1,20 +1,10 @@
-<<<<<<< HEAD
 import axios from 'axios';
 import React, { useContext } from 'react';
-=======
-import axios from "axios";
-import React from "react";
-import { useContext } from 'react';
->>>>>>> bc9bf644c69cda11509cafef2fbff7997a4c45d6
 import { UserContext } from '../context/UserContext';
 import "./css/Evento.css";
 
 const baseURL = "https://ncs15-petdocs-api.onrender.com/events";
 const { nick } = useContext(UserContext);
-<<<<<<< HEAD
-
-=======
->>>>>>> bc9bf644c69cda11509cafef2fbff7997a4c45d6
 export default function EventoUpdate() {
   const [evento, setEvento] = React.useState(null);
   const [error, setError] = React.useState(null);

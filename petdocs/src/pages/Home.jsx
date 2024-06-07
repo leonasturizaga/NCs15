@@ -35,17 +35,8 @@
 
 //***************** opcion 2 ********************* */
 // src/pages/Home.jsx
-<<<<<<< HEAD
 import React, { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
-=======
-import React from 'react';
-import { useContext } from 'react';
-import { UserContext } from '../context/UserContext';
-// import { useLocation } from 'react-router-dom';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { Link } from 'react-router-dom';
->>>>>>> bc9bf644c69cda11509cafef2fbff7997a4c45d6
 import Caracteristicas from '../components/Caracteristicas';
 import PetCard from './PetCard';
 
