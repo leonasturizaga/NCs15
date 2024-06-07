@@ -47,8 +47,7 @@ const Home = () => {
   return (
     <div>
       <div>
-        <h3 className="title-h1">PetDocs home</h3>
-        <p className='text-banner'>Bienvenido {nick}!</p>
+        <h3 className="title-h1">Bienvenido {nick}</h3>
       </div>
       <PetCarousel />
       <Caracteristicas />

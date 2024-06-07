@@ -1,0 +1,143 @@
+.cardsContainer{
+    height: 10vh;
+    display: flex;
+    gap: 0.7rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    /* color: black; */
+}
+
+.card {
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    transition: transform .3s; /* Animación para el hover */
+}
+.card:hover {
+    transform: scale(1.06);
+}
+
+.imageContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.icon-and-text {
+    position: absolute;
+    scale: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-and-text > h5 {
+    margin-top: 2rem;
+    font-size: 3.5rem;
+    text-align: center;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Solo para aclarar un poco el red circle */
+/* .card-back-opacity {
+    opacity: 0.95;
+} */
+
+/* Si la pantalla es grande, las tarjetas se muestran con borde. */
+@media screen and (min-width: 768px){
+    .card-border {
+        padding: 5% 2%;
+        border-radius: 1rem;
+        border-width: 2px;
+        border-style: solid;
+    }
+
+    /*
+    #f9e459 = rgb(249, 228, 89)
+    #f9944e = rgb(249, 148, 78)
+    #f95859 = rgb(249, 88, 89)
+    */
+
+    .yellow-border {
+        border-color: rgba(249, 228, 89, 0.5);
+    }
+    .yellow-border:hover {
+        border-color: rgba(249, 228, 89, 1);
+    }
+
+    .orange-border {
+        border-color: rgba(249, 148, 78, 0.5);
+    }
+    .orange-border:hover {
+        border-color: rgba(249, 148, 78, 1);
+    }
+
+    .red-border {
+        border-color: rgba(249, 88, 89, 0.5);
+    }
+    .red-border:hover {
+        border-color: rgba(249, 88, 89, 1);
+    }
+}
+
+@media screen and (max-width: 500px){
+    .cardsContainer{
+        gap: 0.3rem;
+    }
+
+    .card {
+        width: 10rem;
+    }
+
+    .icon-and-text {
+        scale: 20%;
+    }
+
+    .icon-and-text > h5 {
+        font-size: 3rem;
+    }
+
+    .card:hover {
+        transform: scale(1.04);
+    }
+    .imageContainer {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .cardsContainer{
+        gap: 0.5rem;
+    }
+
+    .card {
+        width: 12.5rem;
+    }
+
+    .icon-and-text {
+        scale: 25%;
+    }
+
+    /* .icon-and-text > h5 {
+        font-size: 4rem;
+    } */
+
+    .card:hover {
+        transform: scale(1.04);
+    }
+}

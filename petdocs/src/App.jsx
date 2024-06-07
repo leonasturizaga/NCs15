@@ -106,11 +106,11 @@
 // import pathLogo from "./assets/LogoPetDocs.png";
 
 // const App = () => {
-  
+
 //   return (
 //     <Router>
 //       <Header brandName={"PetDocs"} pathLogo={pathLogo} navItems={["Inicio", "Nosotros"]} />
-      
+
 //       <Routes>
 //         <Route path="/login" element={<Login />} />
 //         <Route path="/register" element={<Register />} />
@@ -128,7 +128,7 @@
 //           </>
 //         } />
 //       </Routes>
-      
+
 //       <Footer />
 //     </Router>
 //   );
@@ -153,9 +153,9 @@ import Caracteristicas from "./components/Caracteristicas";
 import Hero from "./components/Hero";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
-import Register from "./pages/Register"; 
+import Register from "./pages/Register";
 import Login from "./pages/Login";
-import PetCard from "./pages/PetCard"; 
+import PetCard from "./pages/PetCard";
 import PetForm from "./pages/PetForm";
 import Evento from "./pages/Evento";
 import Nosotros from "./pages/Nosotros";
@@ -175,14 +175,14 @@ const App = () => {
           <Route path="/pet-form" element={<PetForm />} />
           <Route path="/pet-card" element={<PetCard />} />
           <Route path="/evento" element={<Evento />} />
-          <Route path="/home" element={<Home/>} />
-          <Route path="/nosotros" element={<Nosotros/>} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/" element={
             <>
               <Hero />
               <Caracteristicas />
+              <Nosotros />
               <Banner />
-              <PetCard />
             </>
           } />
         </Routes>
