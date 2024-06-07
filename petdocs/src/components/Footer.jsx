@@ -1,20 +1,18 @@
 import './css/Footer.css';
 import { Link } from 'react-router-dom';
-// import ImagenLogo from "../assets/LogoPetDocs.png";
+
 import ImagenInstagram from "../assets/iconoInstagram-alfa.png";
 import ImagenWhatsapp from "../assets/iconoWhatsapp-alfa.png";
 import ImagenMail from "../assets/iconoMail-alfa.png";
-import Nosotros from './../pages/Nosotros';
 
-const Footer = ({ onBrandClick, onQuienesClick }) => {
-  // const Footer = () => {
+const Footer = () => {
   return (
     <div className="container-footer">
       <div id="brand-y-redes">
         <div className="brand-footer">
-          <a href="#" onClick={onBrandClick}>
+          <Link to="/">
             PetDocs
-          </a>
+          </Link>
         </div>
 
         <div className="redes-footer">
@@ -39,8 +37,7 @@ const Footer = ({ onBrandClick, onQuienesClick }) => {
       <div id="links-y-copy">
         <div className="links-footer">
             <span>
-            {/* <Link to="/Nosotros" > <p >Nosotros</p> </Link>  <p>&copy; 2024 PetDocs</p> */}
-                <a href="#" onClick={onQuienesClick}>Quiénes somos</a>
+                <Link to="/nosotros">Quiénes somos</Link>
                 {"|"}
                 <a href="#/">Política de privacidad</a>
                 {"|"}

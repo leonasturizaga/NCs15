@@ -169,7 +169,6 @@ const App = () => {
     <UserProvider>
       <Router>
         <Header brandName={"PetDocs"} pathLogo={pathLogo} navItems={["Inicio", "Nosotros"]} />
-        {/* <Header brandName={"PetDocs"} pathLogo={pathLogo} navItems={items} navActions={itemsActions} /> */}
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
@@ -183,12 +182,10 @@ const App = () => {
               <Hero />
               <Caracteristicas />
               <Banner />
-              <PetCard />
             </>
           } />
         </Routes>
         <Footer />
-        {/* <Footer onBrandClick={handleHomeClick} onQuienesClick={handleNosotrosClick} /> */}
       </Router>
     </UserProvider>
   );
