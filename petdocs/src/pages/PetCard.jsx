@@ -1,11 +1,14 @@
 import axios from "axios";
 import React from "react";
+import { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 import './css/PetCard.css';
 import ImagenPetcard from "../assets/pet-card.png";
 
 const client = axios.create({
     baseURL: "https://ncs15-petdocs-api.onrender.com/pet",
 });
+const { nick } = useContext(UserContext);
 
 export default function PetCard() {
     const [pet, setPet] = React.useState(null);

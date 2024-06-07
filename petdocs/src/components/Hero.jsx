@@ -37,11 +37,14 @@
 // *************** opcion 1 ***************
 // src/components/Hero.jsx
 import React from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 import { Link } from 'react-router-dom';
 import './css/Hero.css';
 import ImagenHero from '../assets/PetDocs_foto2.png';
 
 const Hero = () => {
+    const { nick } = useContext(UserContext);
     return (
         <div className="hero">
             <div className="container-hero">
