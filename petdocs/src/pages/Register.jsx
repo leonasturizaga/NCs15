@@ -1,12 +1,14 @@
 // src/components/Register.jsx
 import React, { useState } from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './css/register.css';
 import imgRegistro from '../assets/portada-registro.png'
 
 const Register = () => {
-  const [nick, setNick] = useState('');
+   const [nick, setNick] = useState('');
   const [password, setPassword] = useState('');
   //adding
   const [repeatPassword, setRepeatPassword] = useState('');

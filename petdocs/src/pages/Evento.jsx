@@ -1,11 +1,21 @@
+<<<<<<< HEAD
 import axios from 'axios';
 import React, { useContext } from 'react';
+=======
+import axios from "axios";
+import React from "react";
+import { useContext } from 'react';
+>>>>>>> bc9bf644c69cda11509cafef2fbff7997a4c45d6
 import { UserContext } from '../context/UserContext';
 import "./css/Evento.css";
 
 const baseURL = "https://ncs15-petdocs-api.onrender.com/events/";
+<<<<<<< HEAD
 // const { nick } = useContext(UserContext);
 
+=======
+const { nick } = useContext(UserContext);
+>>>>>>> bc9bf644c69cda11509cafef2fbff7997a4c45d6
 export default function Evento() {
   const [evento, setEvento] = React.useState(null);
   const [error, setError] = React.useState(null);
@@ -128,7 +138,7 @@ return (
         </div>
       </div>
       <div className="evento-btns">
-        <button className="evento-btn" onClick={createEvento}>Crear Evento</button>
+        <button className="btn-login" onClick={createEvento}>Crear Evento</button>
 
       </div>
     </form>
