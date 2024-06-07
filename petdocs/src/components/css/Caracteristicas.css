@@ -1,5 +1,5 @@
 .cardsContainer{
-    height: 100vh;
+    margin: 4rem 0;
     display: flex;
     gap: 0.7rem;
     justify-content: space-around;
@@ -53,14 +53,62 @@ a {
     opacity: 0.95;
 } */
 
+@media screen and (max-width: 500px){
+    .cardsContainer{
+        margin: 1rem 0;
+        gap: 0.3rem;
+    }
+
+    .card {
+        width: 10rem !important;
+    }
+
+    .icon-and-text {
+        scale: 20%;
+    }
+
+    /* .icon-and-text > h5 {
+        font-size: 4rem;
+    } */
+
+    .card:hover {
+        transform: scale(1.04);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .cardsContainer{
+        margin: 2rem 0;
+        gap: 0.5rem;
+    }
+
+    .card {
+        width: 12.5rem !important;
+    }
+
+    .icon-and-text {
+        scale: 25%;
+    }
+
+    /* .icon-and-text > h5 {
+        font-size: 4rem;
+    } */
+
+    .card:hover {
+        transform: scale(1.04);
+    }
+}
+
+/* BORDES PARA TARJETAS TEMPORALMENTE ANULADOS  */
+
 /* Si la pantalla es grande, las tarjetas se muestran con borde. */
-@media screen and (min-width: 768px){
+/* @media screen and (min-width: 768px){
     .card-border {
         padding: 25% 2%;
         border-radius: 1rem;
         border-width: 2px;
         border-style: solid;
-    }
+    } */
 
     /*
     #f9e459 = rgb(249, 228, 89)
@@ -68,7 +116,7 @@ a {
     #f95859 = rgb(249, 88, 89)
     */
 
-    .yellow-border {
+    /* .yellow-border {
         border-color: rgba(249, 228, 89, 0.5);
     }
     .yellow-border:hover {
@@ -88,48 +136,4 @@ a {
     .red-border:hover {
         border-color: rgba(249, 88, 89, 1);
     }
-}
-
-@media screen and (max-width: 500px){
-    .cardsContainer{
-        gap: 0.3rem;
-    }
-
-    .card {
-        width: 10rem;
-    }
-
-    .icon-and-text {
-        scale: 20%;
-    }
-
-    /* .icon-and-text > h5 {
-        font-size: 4rem;
-    } */
-
-    .card:hover {
-        transform: scale(1.04);
-    }
-}
-
-@media screen and (max-width: 768px){
-    .cardsContainer{
-        gap: 0.5rem;
-    }
-
-    .card {
-        width: 12.5rem;
-    }
-
-    .icon-and-text {
-        scale: 25%;
-    }
-
-    /* .icon-and-text > h5 {
-        font-size: 4rem;
-    } */
-
-    .card:hover {
-        transform: scale(1.04);
-    }
-}
+} */
