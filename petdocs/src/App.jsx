@@ -166,6 +166,7 @@ import pathLogo from "./assets/LogoPetDocs.png";
 
 const App = () => {
   return (
+
     <UserProvider>
       <Router>
         <Header brandName={"PetDocs"} pathLogo={pathLogo} navItems={["Inicio", "Nosotros"]} />
@@ -189,6 +190,7 @@ const App = () => {
         <Footer />
       </Router>
     </UserProvider>
+
   );
 }
 

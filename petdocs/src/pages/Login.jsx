@@ -152,6 +152,7 @@
 
 //********************** opcion 2 ***************** */
 // src/pages/Login.jsx
+
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -165,7 +166,6 @@ const Login = () => {
   const [responseMessage, setResponseMessage] = useState('');
   const { setNick } = useContext(UserContext);
   const navigate = useNavigate();
-
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -179,6 +179,7 @@ const Login = () => {
         setResponseMessage({ message: response.data.error, color: 'red' });
       } else if (response.data.message) {
         setResponseMessage({ message: response.data.message, color: 'green' });
+
         setNick(nick); // Set the nick in context
         navigate('/home'); // Navigate to Home page on successful login
       }
