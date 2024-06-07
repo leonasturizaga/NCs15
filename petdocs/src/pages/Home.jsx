@@ -1,6 +1,8 @@
 // src/pages/Home.jsx
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
+// import { useLocation } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Caracteristicas from '../components/Caracteristicas';
@@ -14,8 +16,8 @@ import Footer from '../components/Footer';
 
 
 const Home = () => {
-  const location = useLocation();
-  const { nick } = location.state || {};  
+  const { nick } = useContext(UserContext);
+
   return (
     <div>
       <div>

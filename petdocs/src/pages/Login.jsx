@@ -76,17 +76,19 @@
 
 // src/pages/Login.jsx
 import React, { useState } from 'react';
+import { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './css/login.css';
 
 const Login = () => {
-  const [nick, setNick] = useState('');
+  const [nick, setNickInput] = useState('');
   const [password, setPassword] = useState('');
   const [responseMessage, setResponseMessage] = useState('');
+  const { setNick } = useContext(UserContext);
   const navigate = useNavigate();
-
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -100,7 +102,9 @@ const Login = () => {
         setResponseMessage({ message: response.data.error, color: 'red' });
       } else if (response.data.message) {
         setResponseMessage({ message: response.data.message, color: 'green' });
-        navigate('/home', { state: { nick } }); // Navigate to Home page with nick
+        // navigate('/home', { state: { nick } }); // Navigate to Home page with nick
+        setNick(nick); // Set the nick in context
+        navigate('/home'); // Navigate to Home page on successful login
       }
     } catch (error) {
       console.error('Error:', error);
@@ -121,7 +125,7 @@ const Login = () => {
                 type="text"
                 id="loginNick"
                 value={nick}
-                onChange={(e) => setNick(e.target.value)}
+                onChange={(e) => setNickInput(e.target.value)}
                 required
               />
             </div>

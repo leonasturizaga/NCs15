@@ -87,7 +87,8 @@ import React, { useState } from 'react';
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+// Context
+import { UserProvider } from './context/UserContext';
 // Components
 import Header from "./components/Header";
 import Caracteristicas from "./components/Caracteristicas";
@@ -108,6 +109,7 @@ import pathLogo from "./assets/LogoPetDocs.png";
 const App = () => {
   
   return (
+    <UserProvider>  
     <Router>
       <Header brandName={"PetDocs"} pathLogo={pathLogo} navItems={["Inicio", "Nosotros"]} />
       
@@ -131,6 +133,7 @@ const App = () => {
       
       <Footer />
     </Router>
+    </UserProvider>  
   );
 }
 
