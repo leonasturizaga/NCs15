@@ -82,6 +82,8 @@
 
 // src/components/Header.jsx
 import React, { useState, useEffect } from "react";
+import { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 import { useNavigate } from 'react-router-dom';
 import "./css/Header.css";
 
@@ -90,6 +92,8 @@ const Header = ({ brandName, pathLogo, navItems }) => {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
+  const { nick } = useContext(UserContext);
+
 
   const handleToggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
@@ -142,6 +146,9 @@ const Header = ({ brandName, pathLogo, navItems }) => {
 
         <div className={`collapse justify-content-end navbar-collapse ${isCollapsed ? '' : 'show'}`}>
           <ul className="navbar-nav align-items-center mr-auto mb-2 mb-md-1">
+            <li>
+            <p className='text-banner'> {nick}</p>
+            </li>
             {navItems.map((item, index) => (
               <li
                 key={item}
