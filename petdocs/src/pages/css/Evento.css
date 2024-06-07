@@ -91,6 +91,8 @@
   background-color: var(--color-secondary);
 }
 
+/* cortes responsivos */
+
 @media screen and (max-width: 500px) {
   .container-evento {
     padding: 50px;
