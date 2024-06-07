@@ -1,5 +1,6 @@
 .container {
     padding: 5%;
+    background: linear-gradient(rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.97)), url('../../assets/paws-background.png');
 }
 
 .title {
@@ -21,4 +22,20 @@ p {
 
 .negrita {
     font-weight: bold;
+}
+
+@media screen and (max-width: 500px){
+    .container {
+        padding: 3%;
+    }
+
+    .title {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
 }

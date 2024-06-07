@@ -1,64 +1,108 @@
 .container-footer{
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    position: absolute;
-    overflow-x: hidden;
     width: 100vw;
-    height: 30vh;
+    /* height: 30vh; */
+    height: auto;
     background-color: var(--color-tertiary);
-    /* justify-content: space-evenly; */
 }
+
+#brand-y-redes {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+/* Hay 'Link' en lugar de 'a' pero lo toma igual. */
 .brand-footer a {
     font-family: var(--font-brand);
     font-size: 2.5rem;
     text-decoration: none;
     color: var(--color-secondary);
-    padding-left: 70px;
-    width: 170px ;
-    float: left;
-    flex-shrink: 2;
+    margin-left: 70px;
+    width: 170px;
+    filter: brightness(1.2);
 }
+
 .redes-footer {
     display: flex;
-    flex-flow: row wrap;
-    padding-right: 70px;
+    /* flex-flow: row wrap; */
+    margin-right: 70px;
 }
+
 .rs-footer img {
     width: 110px !important;
     padding: 0 30px;
 }
 
-.break {
-    flex-basis: 100%;
-    height: 0;
+.rs-footer {
+    transition: transform .2s;
+}
+.rs-footer:hover{
+    transform: scale(1.08);
 }
 
-/* corte responsivo */
-@media screen and (max-width: 576px){
-    .redes-footer {
-        flex-flow: column wrap;
-    }
-    .rs-footer>a> img{
-        width: 60px !important;
-        padding: 5px;
-    }
+#links-y-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#links-y-copy * {
+    font-family: var(--font-text);
+    /* color: var(--color-text); */
+    color: white;
+}
+
+.links-footer * {
+    font-size: small;
+    margin: 0 1rem;
+}
+
+.copy-footer {
+    margin-top: 10px;
+}
+
+.copy-footer p {
+    font-size: smaller;
 }
 
 @media screen and (max-width: 500px){
-    .redes-footer {
-        display: flex;
-        flex-flow: column wrap;
-        padding-right: 30px !important;
+    #brand-y-redes {
+        flex-direction: column;
+        padding: 5px 0;
+        align-items: center;
     }
+
     .brand-footer a {
-        padding-left: 30px;
+        margin-left: 0;
+        font-size: 2rem;
     }
-    .rs-footer>a>img{
+
+    .redes-footer {
+        margin-right: 0;
+    }
+    
+    .rs-footer img {
         width: 50px !important;
-        padding: 5px;
+        padding: 0 10px;
+    }
+
+    .links-footer * {
+        font-size: x-small;
+        margin: 0 0.5rem;
+    }
+
+    .copy-footer {
+        margin-top: 5px;
+    }
+
+    .copy-footer p {
+        font-size: xx-small;
     }
 }
 
-
+/* Agregar algún tamaño de pantalla más */

@@ -182,7 +182,6 @@ const App = () => {
               <Hero />
               <Caracteristicas />
               <Banner />
-              <PetCard />
             </>
           } />
         </Routes>
@@ -193,4 +192,3 @@ const App = () => {
 }
 
 export default App;
-
