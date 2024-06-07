@@ -61,7 +61,7 @@ function App() {
         </>
       )}
 
-      <Footer />
+      <Footer onBrandClick={handleHomeClick} onQuienesClick={handleNosotrosClick} />
 
       {/* <Router>
       <Switch>
