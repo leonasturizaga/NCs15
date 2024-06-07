@@ -84,7 +84,7 @@
   border: 2px solid var(--color-btn);
   background-color: var(--color-btn);
   color: var(--bg-color);
-  padding: 5px 10px;
+  padding: 8px 10px;
 }
 
 .evento-btn:hover {
