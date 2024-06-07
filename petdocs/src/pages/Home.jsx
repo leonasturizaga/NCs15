@@ -39,7 +39,7 @@ import React, { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
 import Caracteristicas from '../components/Caracteristicas';
 import PetCard from './PetCard';
-import PetCarrousel from './pages/PetCarrousel';
+import PetCarousel from './PetCarousel';
 
 const Home = () => {
   const { nick } = useContext(UserContext);
@@ -50,9 +50,8 @@ const Home = () => {
         <h3 className="title-h1">PetDocs home</h3>
         <p className='text-banner'>Bienvenido {nick}!</p>
       </div>
-      {/* <PetCarrousel /> */}
+      <PetCarousel />
       <Caracteristicas />
-      <PetCard />
     </div>
   );
 };

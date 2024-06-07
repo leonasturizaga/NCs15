@@ -3,10 +3,10 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import { UserContext } from '../context/UserContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/PetCarrousel.css';
+import './css/PetCarousel.css';
 import ImagenPetcard from "../assets/pet-card.png";
 
-const PetCarrousel = () => {
+const PetCarousel = () => {
     const { nick } = useContext(UserContext);
     const [pets, setPets] = useState([]);
 
@@ -64,4 +64,4 @@ const PetCarrousel = () => {
     );
 };
 
-export default PetCarrousel;
+export default PetCarousel;
