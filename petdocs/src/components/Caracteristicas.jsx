@@ -74,9 +74,11 @@
 
 //***************** opcion 1  ************* */
 
-import React from "react";
+import React, { useContext } from 'react';
+import { UserContext } from '../context/UserContext';
 import "./css/Caracteristicas.css";
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 //Images
 import pathYellowCircle from "../assets/yellow_circle_.png";
 import pathOrangeCircle from "../assets/orange_circle_.png";
@@ -112,7 +114,7 @@ let cards = [
 
 
 const Caracteristicas = () => {
-
+  const { nick } = useContext(UserContext);
   return (
     <div className="cardsContainer">
       {cards.map((data, index) => (
