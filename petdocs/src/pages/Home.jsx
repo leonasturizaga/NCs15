@@ -40,6 +40,8 @@ import { UserContext } from '../context/UserContext';
 import Caracteristicas from '../components/Caracteristicas';
 import PetCard from './PetCard';
 import PetCarousel from './PetCarousel';
+import OwnerCard from './OwnerCard';
+import UpdateOwner from './UpdateOwner';
 
 const Home = () => {
   const { nick } = useContext(UserContext);
@@ -49,8 +51,12 @@ const Home = () => {
       <div>
         <h3 className="title-h1">Bienvenido {nick}</h3>
       </div>
-      <PetCarousel />
-      <Caracteristicas />
+      {/* <UpdateOwner /> */}
+      <Caracteristicas />      
+      <OwnerCard />
+      {/* <PetCarousel /> */}
+
+
     </div>
   );
 };

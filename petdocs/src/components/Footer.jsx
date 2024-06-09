@@ -12,7 +12,7 @@ const Footer = () => {
 
         <div className="container-footer">            
             <div className="brand-footer">
-                <a href="#">PetDocs</a>   
+                <Link to="home" >PetDocs</Link>   
             </div>            
             <div className="copy-footer">
                 <Link to="/Nosotros" > <p >Nosotros</p> </Link>  <p>&copy; 2024 PetDocs</p>
