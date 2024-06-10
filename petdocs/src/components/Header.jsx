@@ -233,7 +233,7 @@ const Header = ({ brandName, pathLogo, navItems }) => {
         <div className={`collapse justify-content-end navbar-collapse ${isCollapsed ? '' : 'show'}`}>
           <ul className="navbar-nav align-items-center mr-auto mb-2 mb-md-1">
             <li>
-            <p className='text-banner'>Nick: {nick}</p>
+            <p className='text-banner'>{nick}</p>
             </li>
             {navItems.map((item, index) => (
               <li

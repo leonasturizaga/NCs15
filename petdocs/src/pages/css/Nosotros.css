@@ -1,3 +1,18 @@
+.container-nosotros {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width:100%;
+    font-family: var(--font-text);
+    padding-top: 8rem;
+  }
+  .nosotros-content {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
 .container {
     padding: 5%;
 }

@@ -1,4 +1,4 @@
-.container-carousel {
+.container-ownercard {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -8,7 +8,7 @@
   font-family: var(--font-text);
   padding-top: 8rem;
 }
-.card-carousel {
+.card-owner {
   display: flex;
   flex-wrap: wrap;
   justify-content:center;
@@ -18,18 +18,18 @@
   border-radius: 24px;
   padding: 2rem;
 }
-.carousel-content {
+.owner-content {
   display: flex;
   align-items: flex-start;
   margin-top: 20px;
 }
 
-.card-carousel img{
+.card-owner img{
   width: 55px;
   height:55px;
 }
 
-.carousel_picture>img {
+.owner_picture>img {
   width: 275px;
   height: 255px;
   border-radius: 11px;
@@ -37,7 +37,7 @@
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   margin: 60px 30px 30px 30px;
 }
-.carouselform {
+.ownerform {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -46,21 +46,21 @@
   text-align:center;
   margin: 30px;
 }
-.carouselform h3 {
+.ownerform h3 {
   font-family: var(--font-brand);
   font-size: 2.5rem;
   color: var(--color-secondary);
   margin: 20px;
 }
 
-.carouselform input {
+.ownerform input {
   border: 2px solid var(--color-secondary);
   border-radius: 11px;
   padding: 5px;
   width: 200px;
   text-align: center;
 }
-.carouselform a {
+.ownerform a {
   width: 200px;
   text-decoration:none;
   background-color: var(--color-btn);
@@ -72,7 +72,7 @@
   text-align: center;
 }
 
-.container-carouselcard {
+.container-ownercard {
 display: flex;
 flex-flow: row wrap;
 justify-content: center;
@@ -82,7 +82,7 @@ width:100%;
 font-family: var(--font-text);
 margin-top: 8rem;
 }
-.card-carousel {
+.card-owner {
 display: flex;
 flex-wrap: wrap;
 justify-content:center;
@@ -92,12 +92,12 @@ border: 3px solid var(--color-secondary);
 border-radius: 24px;
 padding: 2rem;
 }
-.card-carousel img{
+.card-owner img{
 width: 55px;
 height:55px;
 }
 
-.carousel_picture>img {
+.owner_picture>img {
 width: 275px;
 height: 255px;
 border-radius: 11px;
@@ -105,7 +105,7 @@ border-image: 2px solid var(--color-secondary);
 box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 margin: 60px 30px 30px 30px;
 }
-.carouselform {
+.ownerform {
 display: flex;
 flex-flow: column wrap;
 justify-content: center;
@@ -114,21 +114,21 @@ padding: 0 50px 40px 0;
 text-align:center;
 margin: 30px;
 }
-.carouselform h3 {
+.ownerform h3 {
 font-family: var(--font-brand);
 font-size: 2.5rem;
 color: var(--color-secondary);
 margin: 20px;
 }
 
-.carouselform input {
+.ownerform input {
 border: 2px solid var(--color-secondary);
 border-radius: 11px;
 padding: 5px;
 width: 200px;
 text-align: center;
 }
-.carouselform a {
+.ownerform a {
 width: 200px;
 text-decoration:none;
 background-color: var(--color-btn);

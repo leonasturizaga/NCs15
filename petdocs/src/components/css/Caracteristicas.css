@@ -1,5 +1,5 @@
 .cardsContainer{
-    height: 100vh;
+    height: 0rem;
     display: flex;
     gap: 0.7rem;
     justify-content: space-around;
@@ -14,6 +14,7 @@ a {
 
 .card {
     width: 15rem;
+    height: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,7 +57,7 @@ a {
 /* Si la pantalla es grande, las tarjetas se muestran con borde. */
 @media screen and (min-width: 768px){
     .card-border {
-        padding: 25% 2%;
+        padding: 5% 2%;
         border-radius: 1rem;
         border-width: 2px;
         border-style: solid;
