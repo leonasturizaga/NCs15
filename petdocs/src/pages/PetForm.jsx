@@ -131,7 +131,7 @@ const PetForm = () => {
         pet_picture: null // Changed to null to handle file input properly
     });
 
-    const baseURLpost = `https://ncs15-petdocs-api.onrender.com/owner/${nick}/new_pet`;
+    const baseURLpost = `https://ncs15-petdocs-api.onrender.com/owner/${nick}/new_pet/`;
 
     const handleChange = (e) => {
         const { name, value, type, checked, files } = e.target;
