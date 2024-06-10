@@ -62,6 +62,7 @@
   .login-btn:hover {
     background-color: var(--color-secondary);
     color: var(--bg-color);
+    
   }@media screen and (max-width: 375px){
     .login-container {
       padding: 2rem;
