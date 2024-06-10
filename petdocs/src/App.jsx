@@ -87,6 +87,7 @@ import Evento from "./pages/Evento";
 import Nosotros from "./pages/Nosotros";
 import Home from "./pages/Home";
 import OwnerCard from "./pages/OwnerCard";
+import Calendar from "./components/Calendar";
 
 
 // Images
@@ -109,10 +110,10 @@ const App = () => {
               <Route path="/nosotros" element={<Nosotros />} />
               <Route path="/home" element={<Home />} />
               <Route path="/owner-card" element={<OwnerCard />} />
+              <Route path="/calendar" element={<Calendar />} />
               <Route path="/" element={
                 <>
                   <Hero />
-                  <Caracteristicas />
                   <Nosotros />
                   <Banner />
                 </>
