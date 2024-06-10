@@ -4,6 +4,7 @@ import ImagenWhatsapp from "../assets/iconoWhatsapp-alfa.png";
 import ImagenPin from "../assets/pinubicacion.png";
 import ImagenPDIcon from "../assets/PetDocsIcon.png";
 import ImagenCR from "../assets/copyrightIcon.webp";
+import { Link } from 'react-router-dom';
 
 
 
@@ -29,14 +30,15 @@ const Footer = () => {
             </div>
             <div className="brand-footer">
                 <div>
-                    <a className='footer-brand' href="#"> <img src={ImagenPDIcon} alt="" /> PetDocs</a>
+                    <Link to="/" className='footer-brand'>
+                    <img src={ImagenPDIcon} alt="" /> PetDocs
+                    </Link>
+                    {/* <a className='footer-brand' href="#"> <img src={ImagenPDIcon} alt="" /> PetDocs</a> */}
                 </div>
                 <div>
                     <a className='footer-mail' href="mailto:info@petdocs.com">info@petdocs.com</a>
                 </div>
             </div>            
         </div>
-    )
-}
-
+    )};
 export default Footer

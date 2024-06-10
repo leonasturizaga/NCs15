@@ -157,7 +157,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import PetCard from "./pages/PetCard"; 
 import PetForm from "./pages/PetForm";
-import Evento from "./pages/Evento";
+import Evento from "./pages/EventoForm";
 import Nosotros from "./pages/Nosotros";
 import Home from "./pages/Home";
 
@@ -192,4 +192,3 @@ const App = () => {
 }
 
 export default App;
-

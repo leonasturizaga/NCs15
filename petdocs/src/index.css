@@ -16,10 +16,7 @@
 
 body {
   margin: 0;
-  /* padding:0; --- ORIGINAL*/
   padding: 6rem 0 0 0;
-
-  /* AGREGADO POR DARO */
   display: flex;
   min-width: 320px;
   min-height: 100vh;
