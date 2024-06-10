@@ -78,7 +78,7 @@ const Register = () => {
         </div>
         <div className="hero-info" >
           <h3 className="title-h1">Registrate</h3>
-          <p>¿Yá estas registrado? Inicia sesión <Link to="/Login">&nbsp; acá!</Link></p>
+          <p>¿Ya estas registrado? Inicia sesión <Link to="/Login">&nbsp; acá!</Link></p>
           <form onSubmit={handleSubmit}>
             <div>
               <label>Usuario:</label>

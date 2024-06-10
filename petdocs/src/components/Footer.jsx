@@ -1,42 +1,42 @@
 import './css/Footer.css';
-import { Link } from 'react-router-dom';
-// import ImagenLogo from "../assets/LogoPetDocs.png";
 import ImagenInstagram from "../assets/iconoInstagram-alfa.png";
 import ImagenWhatsapp from "../assets/iconoWhatsapp-alfa.png";
-import ImagenMail from "../assets/iconoMail-alfa.png";
-import Nosotros from './../pages/Nosotros';
+import ImagenPin from "../assets/pinubicacion.png";
+import ImagenPDIcon from "../assets/PetDocsIcon.png";
+import ImagenCR from "../assets/copyrightIcon.webp";
+
 
 
 const Footer = () => {
     return (
 
-        <div className="container-footer">            
-            <div className="brand-footer">
-                <Link to="home" >PetDocs</Link>   
-            </div>            
-            <div className="copy-footer">
-                <Link to="/Nosotros" > <p >Nosotros</p> </Link>  <p>&copy; 2024 PetDocs</p>
-               
-            </div>
+        <div className="container-footer">
             <div className="redes-footer">
                 <div className="rs-footer">
-                   <a href="#/"> <img src={ImagenInstagram} alt="Instagram" /></a>
+                    <a href="https://www.instagram.com/petdocsapp?igsh=MTNkcTZuZG1mbGlwcw=="><img src={ImagenInstagram} alt="instagram" /> petdocsapp</a>
                 </div>
                 <div className="rs-footer">
-                   <a href="#/"> <img src={ImagenWhatsapp} alt="Whatsapp" /></a>
+                     <p> <img src={ImagenWhatsapp} alt="Whatsapp" /> +54-9-11-8765-9123</p>
                 </div>
                 <div className="rs-footer">
-               <a href="#/"><img src={ImagenMail} alt="Mail" /></a>
+                  <p>  <img src={ImagenPin} alt="ubicacion" /> Cucha Cucha 1701 - CABA </p>
                 </div>
             </div>
-            <div className="break"></div>
-
+            <div className="footer-derechos">
+                <div className="footer-cr">
+                    <p><img src={ImagenCR} alt="copyright" /> 2024 - Todos los derechos reservados</p>
+                </div>
+            </div>
+            <div className="brand-footer">
+                <div>
+                    <a className='footer-brand' href="#"> <img src={ImagenPDIcon} alt="" /> PetDocs</a>
+                </div>
+                <div>
+                    <a className='footer-mail' href="mailto:info@petdocs.com">info@petdocs.com</a>
+                </div>
+            </div>            
         </div>
     )
 }
 
 export default Footer
-
-// https://www.instagram.com/
-// https://web.whatsapp.com/
-// mailto:petdocs@example.com
