@@ -186,17 +186,18 @@ const Login = () => {
       setResponseMessage({ message: 'Error, por favor intente nuevamente.', color: 'red' });
     }
   };
-
+// clases corregidas para que no causen problemas y mejora en el estilo
   return (
-    <div className="hero">
-      <div className="container-hero">
-        <div className="hero-info">
-          <h3 className="title-h1">Login</h3>
-          <p>Si aún no te registraste, puedes hacerlo <Link to="/Register" >&nbsp; acá!</Link>.</p>
+    <div className="login">
+      <div className="login-container">
+        <div className="login-info">
+          <h3 className="title-h3">Login</h3>
+          <p className='title-h3-p'>Si aún no te registraste, puedes hacerlo <Link to="/Register" >&nbsp; acá!</Link>.</p>
           <form onSubmit={handleLogin}>
             <div>
-              <label>Usuario:</label>
+              <label className='login-label'>Usuario:</label>
               <input
+                className='login-input'
                 type="text"
                 id="loginNick"
                 value={nick}
@@ -205,8 +206,9 @@ const Login = () => {
               />
             </div>
             <div>
-              <label>Password:</label>
+              <label className='login-label'>Password:</label>
               <input
+                className='login-input'
                 type="password"
                 id="loginPassword"
                 value={password}
@@ -214,7 +216,7 @@ const Login = () => {
                 required
               />
             </div>
-            <button type="submit" className="btn-login">Iniciar Sesión</button>
+            <button type="submit" className="login-btn">Iniciar Sesión</button>
           </form>
           {responseMessage && (
             <p style={{ color: responseMessage.color }}>{responseMessage.message}</p>

@@ -182,7 +182,6 @@ const App = () => {
               <Hero />
               <Caracteristicas />
               <Banner />
-              <PetCard />
             </>
           } />
         </Routes>
