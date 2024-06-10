@@ -156,7 +156,7 @@ const PetForm = () => {
         formData.append('dob', pet.dob);
         formData.append('chip', pet.chip);
         formData.append('breed', pet.breed);
-        formData.append('pet_picture', pet.pet_picture);
+        formData.append('file', pet.pet_picture);
         try {
             const response = await axios.post(baseURLpost, formData, {
                 headers: {
