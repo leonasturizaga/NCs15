@@ -18,6 +18,12 @@
   border-radius: 24px;
   padding: 2rem;
 }
+.owner-content {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
 .card-owner img{
   width: 55px;
   height:55px;

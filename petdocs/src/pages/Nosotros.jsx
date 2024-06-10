@@ -2,7 +2,8 @@ import "./css/Nosotros.css";
 
 const Nosotros = () => {
   return (
-    <div className="container">
+    <div className="container-nosotros">
+      <div className="container-nosotros">
       <h1 className="title">Bienvenidos a PetDocs</h1>
       <p>
         La idea de crear esta web nació de nuestra propia experiencia como
@@ -25,6 +26,8 @@ const Nosotros = () => {
         cuando tengas que salir de viaje o cambiarte de ciudad.
       </p>
       <p><span className="cursiva">"Donde cada ladrido y ronroneo tiene su historia"</span></p>
+      </div>
+
     </div>
   );
 };

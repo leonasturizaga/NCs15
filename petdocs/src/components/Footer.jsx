@@ -1,10 +1,11 @@
-import './css/Footer.css';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import ImagenInstagram from "../assets/iconoInstagram-alfa.png";
 import ImagenWhatsapp from "../assets/iconoWhatsapp-alfa.png";
 import ImagenPin from "../assets/pinubicacion.png";
 import ImagenPDIcon from "../assets/PetDocsIcon.png";
 import ImagenCR from "../assets/copyrightIcon.webp";
-
+import './css/Footer.css';
 
 
 const Footer = () => {
@@ -29,7 +30,7 @@ const Footer = () => {
             </div>
             <div className="brand-footer">
                 <div>
-                    <a className='footer-brand' href="#"> <img src={ImagenPDIcon} alt="" /> PetDocs</a>
+                    <Link to="/home" className='footer-brand' href="#"> <img src={ImagenPDIcon} alt="" /> PetDocs</Link>
                 </div>
                 <div>
                     <a className='footer-mail' href="mailto:info@petdocs.com">info@petdocs.com</a>
