@@ -160,6 +160,7 @@ const PetCard = () => {
 
     return (
         <div className="container-petcard">
+            <div className="card-pet">
             {pets.map((pet) => (
                 <div className="card-pet" key={pet.id}>
                     <img src={ImagenPetcard} alt="petcard" />
@@ -194,6 +195,7 @@ const PetCard = () => {
                     </form>
                 </div>
             ))}
+            </div>
         </div>
     );
 };

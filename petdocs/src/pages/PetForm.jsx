@@ -131,7 +131,7 @@ const PetForm = () => {
         pet_picture: null // Changed to null to handle file input properly
     });
 
-    const baseURLpost = `https://ncs15-petdocs-api.onrender.com/owner/${nick}/new_pet`;
+    const baseURLpost = `https://ncs15-petdocs-api.onrender.com/owner/${nick}/new_pet/`;
 
     const handleChange = (e) => {
         const { name, value, type, checked, files } = e.target;
@@ -150,13 +150,17 @@ const PetForm = () => {
 
     const createPet = async (e) => {
         e.preventDefault();
+        // const formData = new FormData();
         const formData = new FormData();
         formData.append('name', pet.name);
         formData.append('category', pet.category);
         formData.append('dob', pet.dob);
         formData.append('chip', pet.chip);
         formData.append('breed', pet.breed);
-        formData.append('pet_picture', pet.pet_picture);
+        formData.append('file', pet.pet_picture);
+
+        console.log(pet.name,pet.pet_picture);
+
         try {
             const response = await axios.post(baseURLpost, formData, {
                 headers: {
