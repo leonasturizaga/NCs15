@@ -72,28 +72,28 @@ const Register = () => {
 
   return (
     <div className="hero">
-      <div className="container-hero">
-        <div className="hero-img-container">
+      <div className="container-register">
+        <div className="register-img-container">
           <img src={imgRegistro} />
         </div>
-        <div className="hero-info" >
-          <h3 className="title-h1">Registrate</h3>
+        <div className="register-info" >
+          <h3 className="title-register-h3">Registrate</h3>
           <p>¿Ya estas registrado? Inicia sesión <Link to="/Login">&nbsp; acá!</Link></p>
-          <form onSubmit={handleSubmit}>
+          <form className='register-form' onSubmit={handleSubmit}>
             <div>
-              <label>Usuario:</label>
-              <input type="text" value={nick} onChange={(e) => setNick(e.target.value)} required />
+              <label className='register-label'>Usuario:</label>
+              <input className='register-input' type="text" value={nick} onChange={(e) => setNick(e.target.value)} required />
             </div>
             <div>
-              <label>Password:</label>
-              <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+              <label className='register-label'>Password:</label>
+              <input className='register-input' type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
             </div>
             <div>
-              <label>Repetir Password:</label>
-              <input type="password" value={repeatPassword} onChange={(e) => setRepeatPassword(e.target.value)} required /><br></br>
+              <label className='register-label'>Repetir Password:</label>
+              <input className='register-input' type="password" value={repeatPassword} onChange={(e) => setRepeatPassword(e.target.value)} required /><br></br>
             </div>
-            <div>
-              <button type="submit" className="btn-login">Regístrate</button>
+            <div className='register-btns'>
+              <button type="submit" className="btn-register">Regístrate</button>
               {error && <p style={{ color: 'red' }}>{error}</p>}
               {success && <p style={{ color: 'green' }}>{success}</p>}
             </div>
