@@ -109,14 +109,14 @@ const OwnerCard = () => {
     if (!owner) return "...";
 
     return (
-        <div className="container-ownercard">
-            <div className="card-owner">
-                {/* <img src={DefaultOwnerImage} alt="ownercard" /> */}
-                <div className="owner-content">
+        <div>
+            <div>
+
+                <div className="card-owner">
                     <div className="owner_picture">
                         <img src={owner.owner_picture || DefaultOwnerImage} alt="owner_image" />
                         <div className="hero-btns">
-                            <button type="button" className="btn-registrate" onClick={() => setShowModal(true)}>Eliminar Perfil</button>
+                            <button type="button" className="btn-eliminar" onClick={() => setShowModal(true)}>Eliminar Perfil</button>
                         </div>
                         {messageDel && <p style={{ color: messageColor }}>{messageDel}</p>}
                     </div>
@@ -155,23 +155,27 @@ const OwnerCard = () => {
                             onChange={(e) => setOwnerPicture(e.target.files[0])}
                         /><br></br>
                         <div>
-                            <button type="submit" className="btn-login">Modificar</button>
+                            <button type="submit" className="btn-modificar">Modificar</button>
                             {message && <p style={{ color: messageColor }}>{message}</p>}
                         </div>
                     </form>
+                    
                 </div>
             </div>
-            <Modal show={showModal} onHide={() => setShowModal(false)}>
+            <Modal show={showModal} onHide={() => setShowModal(false)} className="card-owner">
+                <div className="ownermodal">
                 <Modal.Header closeButton>
-                    <Modal.Title>Eliminar perfil</Modal.Title>
+                    <h5><Modal.Title>Eliminar perfil</Modal.Title></h5>
                 </Modal.Header>
-                <Modal.Body className="hero-btns">
+                <Modal.Body >
 
-                    <div>¿Esta seguro que quiere eliminar su perfil?</div>
-                    <button type="submit" className="btn-registrate" onClick={handleDelete}>Si</button>
-                    <button type="submit" className="btn-login" onClick={() => setShowModal(false)}>No</button>
-
+                    <div> <p>¿Esta seguro que quiere eliminar su perfil?</p></div>
+                    <div>
+                    <button type="submit" className="btn-eliminar" onClick={handleDelete}>Si</button>
+                    <button type="submit" className="btn-modificar" onClick={() => setShowModal(false)}>No</button>
+                    </div>
                 </Modal.Body>
+                </div>
             </Modal>
         </div>
     );
