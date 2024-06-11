@@ -13,15 +13,19 @@ from django.utils.decorators import method_decorator
 import json
 import mimetypes
 from rest_framework.views import APIView
+from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework.decorators import parser_classes
+
 
 # Allowed MIME types and extensions
 ALLOWED_IMAGE_MIME_TYPES = [
     'image/jpeg',
+    'image/jpg' # mmm
     'image/png',
     'image/gif'
 ]
 
-ALLOWED_IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png']
+ALLOWED_IMAGE_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.gif']
 
 
 # Create your views here.
@@ -149,7 +153,8 @@ class ImageUploadView(View):
             }, status=201)
         except Exception as e:
             return JsonResponse({'error': str(e)}, status=500)
-
+'''
+cambio de lógica 
 @api_view(['POST'])
 def create_pet(request, nick):
     try:
@@ -174,20 +179,50 @@ def create_pet(request, nick):
     except Exception as e:
             return JsonResponse({'error': str(e)}, status=500) 
 
+'''
 
 
+# Método de creación de pet 2
 
+@api_view(['POST'])
+@parser_classes([MultiPartParser, FormParser])
+def create_pet(request, nick):
+    try:
+        owner = get_object_or_404(Owner, pk=nick)
+        data = request.data
 
+        file = request.FILES.get('file')
+        if file:
+            if file.content_type not in ALLOWED_IMAGE_MIME_TYPES:
+                return JsonResponse({'error': 'Unsupported file type. Please upload an image.'}, status=400)
+            ext = mimetypes.guess_extension(file.content_type)
+            if ext not in ALLOWED_IMAGE_EXTENSIONS:
+                return JsonResponse({'error': 'Unsupported image extension. Please upload a .jpg or a .png image.'}, status=400)
+            upload_result = upload(file)
+            data['pet_picture'] = upload_result['url']
 
+        pet_serializer = PetSerializer(data=data)
+        if pet_serializer.is_valid():
+            pet_serializer.save()
+        else:
+            return JsonResponse({"error": pet_serializer.errors}, status=400)
+        
+        owner_pet_serializer = OwnerPetSerializer(data={
+            "owner_nick": owner.nick,
+            "pet_id": pet_serializer.data['id']
+        })
+        if owner_pet_serializer.is_valid():
+            owner_pet_serializer.save()
+            return JsonResponse({
+                'message': 'Pet created successfully',
+            }, status=201)
+        else:
+            return JsonResponse({
+                "Owner_Pet Errors": owner_pet_serializer.errors}, status=400)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
 
-
-
-
-
-
-
-
-
+# fin agregados!
 
 
 @method_decorator(csrf_exempt, name='dispatch')

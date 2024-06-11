@@ -49,7 +49,7 @@ const EventoForm = () => {
   return (
     <div className='container-evento'>
       <div className="evento-title">
-        <h2>Crea tu Evento</h2>
+        <h3>Crea tu Evento</h3>
       </div>
       <form className='evento-form' id="evento-form" onSubmit={handleSubmit}>
         <div className="row">
@@ -74,7 +74,7 @@ const EventoForm = () => {
           </div>
         </div>
         <div className="row">
-          <div className="evento-descripcion">
+          <div className="col-25">
             <label className='evento-label'>Descripcion</label>
           </div>
           <div className="col-75">
