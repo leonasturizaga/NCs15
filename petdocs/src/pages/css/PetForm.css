@@ -1,152 +1,126 @@
 /* usar variables globales */
-.container-hero {
-    height: 100vh;
+.container-petform {
+    height: 75vh;
     display: flex;
-    align-items: center;
+    flex-flow: row wrap;
+    align-items: flex-start;
     justify-content: center;
+    margin: 0 3rem 5rem 3rem;;
   }
   
-  .hero-img-container {
-    width: 47%;
-    float: left;
-    overflow: hidden;
-    height: 100vh;
-    object-fit: cover;
-    object-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    scrollbar-width: none;
-  }
-  
-  .hero-info {
-    float: right;
+  .petform-info img {
+    width: 50px;
+  }  
+  .petform-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 2rem;
     flex: 1;
-    width: 47%;
-  }
-  
-  .hero-title {
-    display: flex;
-    flex-flow: row wrap;
-    text-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    padding-bottom: 10px;
-    text-align: center;
-  }
-  
-  .title-h1 {
+  }    
+  .petform-title{
     font-family: var(--font-title);
     color: var(--color-secondary);
-    font-size: 4.5vmax;
-    padding: 30px 7px 0;
-    margin: 0;
-    flex-grow: 2;
+    padding: 7px 0;
   }
-  
-  .title-h2 {
-    font-family: var(--font-brand);
-    font-size: 7vmax;
-    color: var(--color-tertiary);
-    flex-grow: 2;
-    /* letter-spacing: 4px; */
-    margin: 0;
-  }
-  
-  .hero-info p {
+  .pf-form {
     display: flex;
-    font-family: var(--font-text);
-    font-weight: 400;
-    text-align: center;
-    text-wrap: wrap;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-bottom: 2rem;
   }
-  
-  .hero-btns {
+  .petform-label {
+    text-align: left;
+    width: 250px;
+  }
+  .petform-input {
+    border: 2px solid var(--color-secondary)!important;
+    border-radius: 11px;
+    padding: 5px;
+    width: 300px;
+  }
+  .pf-col-25 {
+    display: flex !important;
+    float: left !important;
+    width: 25%!important;
+    margin-top: 5px !important;
+    align-self: flex-start !important;
+  }
+  .pf-col-75 {
+    float: right !important;
+    width: 75% !important;
+    margin-top: 5px !important;
+  }
+
+  .pf-col-75 .radio {
+    margin: 0 10px;
+  }
+  .pf-button {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-content: center;
     align-items: center;
-    gap: 20px;
-    flex-shrink: 2;
-    height: 25vh;
-  }
-  
-  .btn-registrate {
-    background-color: var(--color-btn);
+    margin-top: 20px;
+    height: 5vh;
+    gap: 2rem;
+  }  
+  .button-pf {
+    background-color: var(--color-btn)!important;
     color: var(--bg-color);
     border: 2px solid var(--color-btn);
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-radius: 15px;
     font-size: 1rem;
   }
-  
-  .btn-login {
-    color: var(--color-text);
-    border: 2px solid var(--color-btn);
-    padding: 10px 20px;
-    border-radius: 15px;
-    font-size: 1rem;
-  }
-  
-  .btn-registrate:hover,
-  .btn-login:hover {
-    background-color: var(--color-secondary);
-    border: 2px solid var(--color-btn);
-    color: var(--bg-color);
-  }
-  
-  @media screen and (min-width: 1440px){
-      .container-hero {
-        height: 100vh;
-        padding: 2rem;
-      }
-  }
-  
-  @media screen and (max-width: 500px){
-    .container-hero {
-      height: 100vh;
+  @media screen and (max-width: 500px) {
+    .container-petform {
+      justify-content: space-around;
+      margin:0;
+      padding:0;
+      flex-flow: column nowrap;
+      height: 125vh;
+      width:100%;
+    }
+    .petform-info {
       display: flex;
-      flex-flow:row wrap;
-      align-items: center;
-      align-content:center;
-      padding: 1rem;
-    }
-    .hero-img-container{
-      width: 100%;
-      height: 50%;
-      align-items:center;
-      justify-content:center;
-      object-fit:cover;
-      object-position:center;
-      overflow: hidden;
-      scrollbar-width: none;
-    }
-    .hero-title {
-      display: flex;
-      align-items:center;
-      justify-content:center;
-    }
-    .title-h1 {
-      font-size: 6vmax;
-      padding: 0 20px;
-    }
-    .title-h2 {
-      font-size: 8vmax;
-      padding: 0 20px;
-    }
-    .hero-btns {
-      display: flex;
-      flex-flow: row nowrap;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-shrink: 2;
-      height: 10vh;
-      text-wrap: nowrap;
+      flex: 1;
+      width: 100%;
+    }
+    .pf-col-25 {
+      display: flex !important;
+      width: 100%!important;
+      margin-top: 5px !important;
+      align-self: flex-start !important;
+    }
+    .pf-col-75 {
+      width: 100% !important;
+      margin-top: 5px !important;
+    }
+    .petform-label {
+      text-align: left;
+      font-size: 0.9rem;
+    }    
+    .petform-input {
+      width: 220px;
+      font-size: 0.9rem;
+    }
+    .pf-button {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-content: center;
+      align-items: center;
+      margin-top: 20px;
+      margin-right: 20px;
+      height: 5vh;
+    } 
+    .button-pf {
+      padding: 7px 10px;
     }
   }
+  
