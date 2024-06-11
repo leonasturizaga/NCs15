@@ -161,7 +161,7 @@ import Evento from "./pages/EventoForm";
 import Nosotros from "./pages/Nosotros";
 import Home from "./pages/Home";
 import OwnerCard from "./pages/OwnerCard";
-import Calendar from "./components/Calendar";
+// import Calendar from "./components/Calendar";
 
 // Images
 import pathLogo from "./assets/LogoPetDocs.png";
@@ -180,7 +180,7 @@ const App = () => {
           <Route path="/home" element={<Home/>} />
           <Route path="/nosotros" element={<Nosotros/>} />
           <Route path="/owner-card" element={<OwnerCard />} />
-          <Route path="/calendar" element={<Calendar />} />          
+          {/* <Route path="/calendar" element={<Calendar />} />           */}
           <Route path="/" element={
             <>
               <Hero />

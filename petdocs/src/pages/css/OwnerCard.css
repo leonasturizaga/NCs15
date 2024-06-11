@@ -1,13 +1,3 @@
-.container-ownercard {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width:100%;
-    font-family: var(--font-text);
-    padding-top: 8rem;
-  }
   .card-owner {
     display: flex;
     flex-wrap: wrap;
@@ -18,12 +8,7 @@
     border-radius: 24px;
     padding: 2rem;
   }
-  .owner-content {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 20px;
-  }
-  
+ 
   .card-owner img{
     width: 55px;
     height:55px;
@@ -57,98 +42,29 @@
     border: 2px solid var(--color-secondary);
     border-radius: 11px;
     padding: 5px;
-    width: 200px;
-    text-align: center;
+    width: 300px;
+    
   }
-  .ownerform a {
-    width: 200px;
-    text-decoration:none;
-    background-color: var(--color-btn);
-    border: 2px solid var(--color-btn);
-    color: var(--bg-color);
-    border-radius: 14px;
-    margin-top: 10px;
-    padding: 3px;
-    text-align: center;
-  }
-  
-  .container-ownercard {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width:100%;
-  font-family: var(--font-text);
-  margin-top: 8rem;
-  }
-  .card-owner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:center;
-  align-content:center;
-  gap: 4vw;
-  border: 3px solid var(--color-secondary);
-  border-radius: 24px;
-  padding: 2rem;
-  }
-  .card-owner img{
-  width: 55px;
-  height:55px;
-  }
-  
-  .owner_picture>img {
-  width: 275px;
-  height: 255px;
-  border-radius: 11px;
-  border-image: 2px solid var(--color-secondary);
-  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-  margin: 60px 30px 30px 30px;
-  }
-  .ownerform {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  padding: 0 50px 40px 0;
-  text-align:center;
-  margin: 30px;
-  }
-  .ownerform h3 {
-  font-family: var(--font-brand);
-  font-size: 2.5rem;
-  color: var(--color-secondary);
-  margin: 20px;
-  }
-  
-  .ownerform input {
-  border: 2px solid var(--color-secondary);
-  border-radius: 11px;
-  padding: 5px;
-  width: 200px;
-  text-align: center;
-  }
-  .ownerform a {
-  width: 200px;
-  text-decoration:none;
-  background-color: var(--color-btn);
-  border: 2px solid var(--color-btn);
-  color: var(--bg-color);
-  border-radius: 14px;
-  margin-top: 10px;
-  padding: 3px;
-  text-align: center;
-  }
-  .hero-btns {
+  .ownermodal {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    flex-shrink: 2;
-    height: 25vh;
+    padding: 0 5px 4px 0;
+    text-align:center;
+    margin: 3px;
   }
-  .btn-registrate {
+  .ownermodal h5 {
+    font-family: var(--font-brand);
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    margin: 20px;
+    text-align: center;
+  }
+  .ownerform p {
+    text-align: center;
+  }
+  .btn-eliminar {
     background-color: var(--color-btn);
     color: var(--bg-color);
     border: 2px solid var(--color-btn);
@@ -156,68 +72,15 @@
     border-radius: 15px;
     font-size: 1rem;
   }
-  
-  .btn-login {
+  .btn-modificar {
     color: var(--color-text);
     border: 2px solid var(--color-btn);
     padding: 10px 20px;
     border-radius: 15px;
     font-size: 1rem;
   }
-  
-  .btn-registrate:hover,
-  .btn-login:hover {
+  .btn-eliminar:hover, .btn-modificar:hover {
     background-color: var(--color-secondary);
     border: 2px solid var(--color-btn);
     color: var(--bg-color);
-  }
-  
-  @media screen and (min-width: 1440px){
-    .container-hero {
-      height: 100vh;
-      padding: 2rem;
-    }
-  }
-  
-  @media screen and (max-width: 500px){
-  .container-hero {
-    height: 100vh;
-    display: flex;
-    flex-flow:row wrap;
-    align-items: center;
-    align-content:center;
-    padding: 1rem;
-  }
-  .hero-img-container{
-    width: 100%;
-    height: 50%;
-    align-items:center;
-    justify-content:center;
-    object-fit:cover;
-    object-position:center;
-    overflow: hidden;
-    scrollbar-width: none;
-  }
-  .hero-title {
-    display: flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .title-h1 {
-    font-size: 6vmax;
-    padding: 0 20px;
-  }
-  .title-h2 {
-    font-size: 8vmax;
-    padding: 0 20px;
-  }
-  .hero-btns {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 2;
-    height: 10vh;
-    text-wrap: nowrap;
-  }
   }
