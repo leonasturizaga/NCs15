@@ -4,10 +4,20 @@ nav li a {
 nav li a:hover {    
     transform: scale(1.1);
 }
+.dropdown-item:hover {
+    transform: none !important;
+    font-weight: bolder;
+}
+/* .dropdown-menu:hover {
+    transform: none !important;
+} */
+.no-hover-bg:hover {
+    background-color: transparent !important;
+}
 
 /* Para el color de fondo del header/navbar */
 .navbar-custom-bg-color {
-    background-color: var(--color-tertiary);
+    background-color: var(--color-tertiary) !important;
 }
 
 /* Para el color de texto de los links del header/navbar */
