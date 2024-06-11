@@ -76,7 +76,7 @@
 //                         <div>
 //                         <label >Chip
 //                         <label htmlFor="chip" type="radio">
-   
+
 //                         <input
 //                             name="chipGroup"
 //                             type="radio"
@@ -93,7 +93,7 @@
 //                         />No</label>
 //                         </label>
 //                         </div>
-                        
+
 
 //                         <div>
 //                         <label htmlFor="photo">Agregar Foto</label>
@@ -177,91 +177,120 @@ const PetForm = () => {
     };
 
     return (
-        <div className="hero">
-            <div className="container-hero">
-                <div className="hero-img-container">
-                    <img src={ImagenPetcard} alt="petcard" />
-                </div>
-                <div className="hero-info">
-                    <h3 className="title-h1">Guarda los datos de tu Mascota {nick}</h3>
-                    <form onSubmit={createPet}>
-                        <div>
-                            <label htmlFor="petname">Nombre</label>
-                            <input
-                                type="text"
-                                name="name"
-                                value={pet.name}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="dob">Nacimiento</label>
-                            <input
-                                type="date"
-                                name="dob"
-                                value={pet.dob}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="category">Especie</label>
-                            <input
-                                type="text"
-                                name="category"
-                                value={pet.category}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="breed">Raza</label>
-                            <input
-                                type="text"
-                                name="breed"
-                                value={pet.breed}
-                                onChange={handleChange}
-                                required
-                            />
-                        </div>
-                        <div>
-                            <label>Chip</label>
-                            <label htmlFor="chip-yes">
+        <div>
+            <div className="container-petform">
+                <div className="petform-info">
+                    <span className="petform-title">
+                        <img src={ImagenPetcard} alt="petcard" />
+                        <h3>Guarda los datos de tu Mascota, {nick}</h3>
+                    </span>
+                    <form className='pf-form' onSubmit={createPet}>
+                        <div className='row-pf'>
+                            <div className="pf-col-25">
+                                <label className='petform-label' htmlFor="petname">Nombre</label>
+                            </div>
+                            <div className="pf-col-75">
                                 <input
+                                    className='petform-input'
+                                    type="text"
+                                    name="name"
+                                    value={pet.name}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div className='row-pf'>
+                            <div className="pf-col-25">
+                            <label className='petform-label' htmlFor="dob">Nacimiento</label>
+                            </div>
+                            <div className="pf-col-75">
+                                <input
+                                    className='petform-input'
+                                    type="date"
+                                    name="dob"
+                                    value={pet.dob}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div className='row-pf'>
+                            <div className="pf-col-25">
+                                <label className='petform-label' htmlFor="category">Especie</label>
+                            </div>
+                            <div className="pf-col-75">
+                                <input
+                                    className='petform-input'
+                                    type="text"
+                                    name="category"
+                                    value={pet.category}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div className='row-pf'>
+                            <div className="pf-col-25">
+                                <label className='petform-label' htmlFor="breed">Raza</label>
+                            </div>
+                            <div className="pf-col-75">
+                                <input
+                                    className='petform-input'
+                                    type="text"
+                                    name="breed"
+                                    value={pet.breed}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </div>
+                        </div>
+                        <div className='row-pf'>
+                            <div className="pf-col-25">
+                                <label htmlFor="chip-yes" className='petform-label' >Chip</label>
+                            </div>
+                            <div className="pf-col-75">
+                                <input className='radio'
                                     name="chip"
                                     type="radio"
                                     value={true}
                                     checked={pet.chip === true}
                                     onChange={() => setPet(prevState => ({ ...prevState, chip: true }))}
-                                    
                                 /> Si
-                            </label>
-                            <label htmlFor="chip-no">
+                                
                                 <input
+                                className='radio'
                                     name="chip"
                                     type="radio"
                                     value={false}
                                     checked={pet.chip === false}
                                     onChange={() => setPet(prevState => ({ ...prevState, chip: false }))}
-                                    
                                 /> No
-                            </label>
+                            </div>
                         </div>
-                        <div>
-                            <label htmlFor="pet_picture">Agregar Foto</label>
-                            <input
-                                type="file"
-                                name="pet_picture"
-                                onChange={handleChange}
-                                
-                            />
+
+                        <div className='row-pf'>
+                            <div className="pf-col-25">
+                                <label className='petform-label' htmlFor="pet_picture">Agregar Foto</label>
+                            </div>
+                            <div className="pf-col-75">
+                                <input
+                                    className='petform-input'
+                                    type="file"
+                                    name="pet_picture"
+                                    accept="jpg,png"
+                                    onChange={handleChange}
+                                />
+                            </div>
                         </div>
-                        <button type="submit" className="btn-login">Create Pet</button>
+                        <div className='pf-button'>
+                        <button type="submit" className="button-pf">Create Pet</button>
+                        </div>
                     </form>
+
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 
