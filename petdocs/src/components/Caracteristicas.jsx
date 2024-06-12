@@ -42,7 +42,8 @@ const Caracteristicas = () => {
   return (
     <div className="cardsContainer">
       {cards.map((data, index) => (
-        <Link to={data.link} key={index}>
+        // <Link to={data.link} key={index}>
+        <Link to={nick ? data.link : "/login"} key={index}>
           <div className="card" key={index}>
           {/* <div className={`card card-border 
           ${data.id == "yellowCard" ? 'yellow-border' : 
