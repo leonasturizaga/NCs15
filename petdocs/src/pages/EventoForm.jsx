@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import "./css/Evento.css"
 
 const EventoForm = () => {
   const [ownerPets, setOwnerPets] = useState([]);
   const [responseMessage, setResponseMessage] = useState('');
-
+  const navigate = useNavigate();
   useEffect(() => {
     axios.get('https://ncs15-petdocs-api.onrender.com/owner_pet/')
       .then(response => {
@@ -39,6 +40,7 @@ const EventoForm = () => {
       .then(response => {
         setResponseMessage('Evento creado con éxito!');
         console.log('Evento creado:', response.data);
+        navigate('/agenda'); // Navigate to home or any other page after deletion
       })
       .catch(error => {
         setResponseMessage('Error al crear el evento');
