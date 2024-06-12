@@ -16,7 +16,7 @@ const Home = () => {
     <div>
       <div className='home-container'>
         <div>
-          <h3 className="title-h3">PetDocs Home</h3>
+          <h3 className="title-h3">Mi perfil</h3>
         </div>
 
         <Caracteristicas />

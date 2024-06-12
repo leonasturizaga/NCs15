@@ -191,7 +191,7 @@ const Login = () => {
     <div className="login">
       <div className="login-container">
         <div className="login-info">
-          <h3 className="title-h3">Login</h3>
+          <h3 className="title-h3">Iniciar sesión</h3>
           <p className='title-h3-p'>Si aún no te registraste, puedes hacerlo <Link to="/Register" >&nbsp; acá!</Link>.</p>
           <form onSubmit={handleLogin}>
             <div>
@@ -206,7 +206,7 @@ const Login = () => {
               />
             </div>
             <div>
-              <label className='login-label'>Password:</label>
+              <label className='login-label'>Contraseña:</label>
               <input
                 className='login-input'
                 type="password"

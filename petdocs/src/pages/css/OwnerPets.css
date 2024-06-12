@@ -26,6 +26,13 @@
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     margin: 60px 30px 30px 30px;
   }
+  .ownerpets-title h3{
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--color-secondary);
+    text-align: center;
+  }
+
   .ownerpetsform {
     display: flex;
     flex-flow: column wrap;

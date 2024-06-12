@@ -239,7 +239,7 @@ const EventoUpdate = () => {
         </div>
         <div className="row">
           <div className="col-25">
-            <label className='evento-label'>Titulo</label>
+            <label className='evento-label'>Título</label>
           </div>
           <div className='col-75'>
             <input className="evento-input" type="text" id="title" defaultValue={evento.title} required />
@@ -247,7 +247,7 @@ const EventoUpdate = () => {
         </div>
         <div className="row">
           <div className="col-25">
-            <label className='evento-label'>Descripcion</label>
+            <label className='evento-label'>Descripción</label>
           </div>
           <div className="col-75">
             <textarea className='evento-textarea' id="description" defaultValue={evento.description} required />
@@ -263,7 +263,7 @@ const EventoUpdate = () => {
         </div>
         <div className="row">
           <div className="col-25">
-            <label className='evento-label'>Fecha de Finalizacion</label>
+            <label className='evento-label'>Fecha de Finalización</label>
           </div>
           <div className="col-75">
             <input className='evento-input' type="datetime-local" id="enddate" defaultValue={evento.enddate} required />
@@ -279,7 +279,7 @@ const EventoUpdate = () => {
         </div>
         <div className="evento-btns">
           <button className='evento-btn1' type="submit">Modificar</button>
-          <button className='evento-btn2' type="button" onClick={handleDelete}>Borrar</button>
+          <button className='evento-btn2' type="button" onClick={handleDelete}>Eliminar</button>
         </div>
       </form>
       <p id="response-message">{responseMessage}</p>
