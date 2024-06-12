@@ -2,9 +2,9 @@
 // import React from "react";
 // import './css/PetCard.css';
 // import ImagenPetcard from "../assets/pet-card.png";
-
+// import { Link } from 'react-router-dom';
 // const client = axios.create({
-//     baseURL: "https://ncs15-petdocs-api.onrender.com/pet",
+//     baseURL: "https://ncs15-petdocs-api.onrender.com/pet/",
 // });
 
 // export default function PetCard() {
@@ -55,75 +55,74 @@
 //                         plaintext='true'
 //                         readOnly
 //                     />
-//                     <a type="button" href="#">Ver Mas</a>
+//                     <a type="button" > <Link to="/OwnerPets">Ver Mas </Link></a>
 //                 </form>
 //             </div>
 //         </div>
 //     );
 // }
 
-//**************************** version 2 ************* */
-import axios from 'axios';
-import React, { useContext, useEffect, useState } from 'react';
-import { UserContext } from '../context/UserContext';
+// //**************************** version 3 ************* */
+// src/pages/PetCard.jsx
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom';
 import './css/PetCard.css';
 import ImagenPetcard from "../assets/pet-card.png";
+import { Link } from 'react-router-dom';
 
 const PetCard = () => {
-    const { nick } = useContext(UserContext);
-    const [pets, setPets] = useState([]);
+    const { id } = useParams();
+    const [pet, setPet] = useState(null);
 
     useEffect(() => {
-        const fetchPets = async () => {
+        const fetchPet = async () => {
             try {
-                const response = await axios.get(`https://ncs15-petdocs-api.onrender.com/owner/${nick}/pets/`);
-                setPets(response.data);
+                const response = await axios.get(`https://ncs15-petdocs-api.onrender.com/pet/${id}`);
+                setPet(response.data);
             } catch (error) {
-                console.error('Error fetching pets:', error);
+                console.error('Error fetching pet data:', error);
             }
         };
-        fetchPets();
-    }, [nick]);
+        fetchPet();
+    }, [id]);
 
-    if (pets.length === 0) return "No existe dicha mascota! :( ";
+    if (!pet) return "No existe dicha mascota! :( ";
 
     return (
-        <div>
-            {pets.map((pet) => (
-                <div className="card-pet" key={pet.id}>
-                    <img src={ImagenPetcard} alt="petcard" />
-                    <div>
-                        <img src={pet.pet_picture} alt="imagen_de_mascota" />
-                    </div>
-
-                    <form >
-                        <h3>{pet.name}</h3>
-                        <label>Nacimiento</label>
-                        <input
-                            type="text"
-                            name="dob"
-                            value={pet.dob}
-                            readOnly
-                        />
-                        <label>Especie</label>
-                        <input
-                            type="text"
-                            name="category"
-                            value={pet.category}
-                            readOnly
-                        />
-                        <label>Raza</label>
-                        <input
-                            type="text"
-                            name="breed"
-                            value={pet.breed}
-                            readOnly
-                        />
-                        <a type="button" href="#">Ver Mas</a>
-                        {/* falta el ruteo a Ver Mas */}
-                    </form>
+        <div className="container-petcard">
+            <div className="card-pet">
+                <img src={ImagenPetcard} alt="petcard" />
+                <div className="pet_picture">
+                    <img src={pet.pet_picture} alt="imagen_de_mascota" />
                 </div>
-            ))}
+
+                <form className="petform">
+                    <h3>{pet.name}</h3>
+                    <label>Nacimiento</label>
+                    <input
+                        type="text"
+                        name="dob"
+                        value={pet.dob}
+                        readOnly
+                    />
+                    <label>Especie</label>
+                    <input
+                        type="text"
+                        name="category"
+                        value={pet.category}
+                        readOnly
+                    />
+                    <label>Raza</label>
+                    <input
+                        type="text"
+                        name="breed"
+                        value={pet.breed}
+                        readOnly
+                    />
+                    <a type="button" > <Link to="/Owner-Pets">Ver Mas </Link></a>
+                </form>
+            </div>
         </div>
     );
 };
