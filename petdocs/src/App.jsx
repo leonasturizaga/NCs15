@@ -13,17 +13,17 @@ import Caracteristicas from "./components/Caracteristicas";
 import Hero from "./components/Hero";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
-import Register from "./pages/Register"; 
+import Register from "./pages/Register";
 import Login from "./pages/Login";
-import PetCard from "./pages/PetCard"; 
+import PetCard from "./pages/PetCard";
 import PetForm from "./pages/PetForm";
 import EventoForm from "./pages/EventoForm";
-// import EventoUpdate from "./pages/EventoUpdate";
+import EventoUpdate from "./pages/EventoUpdate";
 import Nosotros from "./pages/Nosotros";
 import Home from "./pages/Home";
 import OwnerCard from "./pages/OwnerCard";
 import OwnerPets from './pages/OwnerPets';
-import Calendar from "./pages/Calendar";
+import Agenda from "./pages/Agenda";
 
 // Images
 import pathLogo from "./assets/LogoPetDocs.png";
@@ -40,21 +40,25 @@ const App = () => {
           <Route path="/pet-form" element={<PetForm />} />
           <Route path="/pet-card" element={<PetCard />} />
           <Route path="/evento-form" element={<EventoForm />} />
-          {/* <Route path="/evento-update" element={<EventoUpdate />} /> */}
-          <Route path="/home" element={<Home/>} />
-          <Route path="/nosotros" element={<Nosotros/>} />
+          <Route path="/evento-update/:id" element={
+            <>
+              <Caracteristicas />
+              <EventoUpdate />
+            </>
+          } />
+          <Route path="/home" element={<Home />} />
+          <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/owner-card" element={<OwnerCard />} />
           <Route path="/owner-pets" element={<OwnerPets />} />
           <Route path="/pet/:id" element={<PetCard />} />
-          <Route path="/calendar" element={<Calendar />} /> 
-          <Route path="/carousel" element={<PetCarousel />} />       
-
+          <Route path="/agenda" element={<Agenda />} />
+          <Route path="/carousel" element={<PetCarousel />} />
 
           <Route path="/" element={
             <>
               <Hero />
               <Caracteristicas />
-              <Nosotros/>
+              <Nosotros />
               <Banner />
             </>
           } />

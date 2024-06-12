@@ -1,12 +1,10 @@
-//******************* version 2 ***************** */
-// src/components/Calendar.jsx
+//*************************version 3 ***************** */
 import React, { useEffect, useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './css/Calendar.css';
 import 'moment/locale/es';
-
 
 // Set moment to use Spanish
 moment.locale('es');
@@ -28,7 +26,7 @@ const messages = {
   showMore: total => `+ Ver más (${total})`
 };
 
-const CalendarComponent = ({ nick }) => {
+const CalendarComponent = ({ nick, onSelectEvent }) => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
@@ -81,6 +79,7 @@ const CalendarComponent = ({ nick }) => {
           event: EventComponent
         }}
         messages={messages}
+        onSelectEvent={onSelectEvent}
       />
     </div>
   );

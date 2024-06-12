@@ -59,7 +59,7 @@ const OwnerPets = () => {
                             />
                             
                             <a type="button"><Link to={`/pet/${pet.id}`}>Ver Mascota</Link></a>
-                            <a type="button"><Link to="/calendar">Ver Calendario</Link></a>
+                            <a type="button"><Link to="/agenda">Ver Calendario</Link></a>
                             {/* <button className='btn-vermascota'>Ver Mascota</button>
                             <button className="btn-vercalendario">Ver Calendario</button> */}
                            
