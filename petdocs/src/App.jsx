@@ -37,9 +37,19 @@ const App = () => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/pet-form" element={<PetForm />} />
+          <Route path="/pet-form" element={
+            <>
+              <Caracteristicas />
+              <PetForm />
+            </>
+          } />
           <Route path="/pet-card" element={<PetCard />} />
-          <Route path="/evento-form" element={<EventoForm />} />
+          <Route path="/evento-form" element={
+          <>
+              <Caracteristicas />
+              <EventoForm />
+            </>
+          } />
           <Route path="/evento-update/:id" element={
             <>
               <Caracteristicas />
@@ -50,7 +60,12 @@ const App = () => {
           <Route path="/nosotros" element={<Nosotros />} />
           <Route path="/owner-card" element={<OwnerCard />} />
           <Route path="/owner-pets" element={<OwnerPets />} />
-          <Route path="/pet/:id" element={<PetCard />} />
+          <Route path="/pet/:id" element={
+            <>
+              <Caracteristicas />
+              <PetCard />
+            </>
+          } />
           <Route path="/agenda" element={<Agenda />} />
           <Route path="/carousel" element={<PetCarousel />} />
 

@@ -51,3 +51,14 @@
   width: 200px;
   text-align: center;
 }
+.carouselcontent a {
+  width: 200px;
+  text-decoration:none;
+  background-color: var(--color-btn);
+  border: 2px solid var(--color-btn);
+  color: var(--bg-color);
+  border-radius: 14px;
+  margin-top: 10px;
+  padding: 3px;
+  text-align: center;
+}

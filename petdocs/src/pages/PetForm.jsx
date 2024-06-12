@@ -182,7 +182,7 @@ const PetForm = () => {
                 <div className="petform-info">
                     <span className="petform-title">
                         <img src={ImagenPetcard} alt="petcard" />
-                        <h3>Guarda los datos de tu Mascota, {nick}</h3>
+                        <h3>Guarda los datos de tu Mascota</h3>
                     </span>
                     <form className='pf-form' onSubmit={createPet}>
                         <div className='row-pf'>
