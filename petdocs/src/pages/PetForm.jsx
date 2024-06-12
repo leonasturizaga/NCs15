@@ -284,7 +284,7 @@ const PetForm = () => {
                             </div>
                         </div>
                         <div className='pf-button'>
-                        <button type="submit" className="button-pf">Create Pet</button>
+                        <button type="submit" className="button-pf">Crear Mascota</button>
                         </div>
                     </form>
 

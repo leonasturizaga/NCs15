@@ -135,7 +135,7 @@ const Header = ({ brandName, pathLogo, navItems }) => {
                         navigate("/Home");
                       }}
                     >
-                      Home
+                      Mi perfil
                     </a>
                     <a
                       // className="dropdown-item" 
@@ -146,7 +146,7 @@ const Header = ({ brandName, pathLogo, navItems }) => {
                         navigate("/");
                       }}
                     >
-                      Logout
+                      Cerrar sesión
                     </a>
                   </div>
                 </>
