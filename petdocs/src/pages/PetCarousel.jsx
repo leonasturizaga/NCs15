@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import { UserContext } from '../context/UserContext';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/PetCarousel.css';
 import ImagenPetcard from "../assets/pet-card.png";
@@ -22,7 +23,7 @@ const PetCarousel = () => {
         fetchPets();
     }, [nick]);
 
-    if (pets.length === 0) return "No existe dicha mascota! :( ";
+    if (pets.length === 0) return ". . .";
 
     return (
         <div className="container-carousel" >
@@ -57,6 +58,7 @@ const PetCarousel = () => {
                                     value={pet.breed}
                                     readOnly
                                 />
+                                <a type="button" className="btn-iracalendario" ><Link to={`/pet/${pet.id}`}>Ver Mascota</Link></a>
                             </div>
                         </div>
                     </Carousel.Item>
