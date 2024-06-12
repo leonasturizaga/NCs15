@@ -5,6 +5,7 @@ import { UserContext } from '../context/UserContext';
 import ImagenPetcard from "../assets/pet-card.png";
 import { Link } from 'react-router-dom';
 import './css/OwnerPets.css';
+import '../components/Calendar';
 
 const OwnerPets = () => {
     const { nick } = useContext(UserContext);
@@ -58,7 +59,7 @@ const OwnerPets = () => {
                             />
                             
                             <a type="button"><Link to={`/pet/${pet.id}`}>Ver Mascota</Link></a>
-                            <a type="button"><Link to={`/pet/${pet.id}`}>Ver Calendario</Link></a>
+                            <a type="button"><Link to="/calendar">Ver Calendario</Link></a>
                             {/* <button className='btn-vermascota'>Ver Mascota</button>
                             <button className="btn-vercalendario">Ver Calendario</button> */}
                            
