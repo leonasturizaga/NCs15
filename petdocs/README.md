@@ -1,10 +1,10 @@
 <div align="center">
 
-## PetDocs
+# PetDocs
 
 </div>
 
-# React + Vite
+## React + Vite
 ## Getting Started
 
 1. Clone the repository:
@@ -31,13 +31,13 @@ and open http://localhost:5173
 
 ## Stack
 
-- "vite": "^5.2.0"
-- "@vitejs/plugin-react-swc": "^3.7.0",
-- "axios": "^1.7.2",
-- "bootstrap": "^5.3.3",
-- "moment": "^2.30.1",
-- "react": "^18.2.0",
-- "react-big-calendar": "^1.12.2",
-- "react-bootstrap": "^2.10.2",
-- "react-dom": "^18.2.0",
-- "react-router-dom": "^6.23.1"
+- vite: ^5.2.0
+- @vitejs/plugin-react-swc: ^3.7.0
+- axios: ^1.7.2
+- bootstrap": ^5.3.3
+- moment: ^2.30.1
+- react: ^18.2.0
+- react-big-calendar: ^1.12.2
+- react-bootstrap: ^2.10.2
+- react-dom: ^18.2.0
+- react-router-dom: ^6.23.1
