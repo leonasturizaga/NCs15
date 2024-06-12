@@ -80,3 +80,36 @@
     border: 2px solid var(--color-btn);
     color: var(--bg-color);
   }
+
+  @media screen and (max-height: 768px) {
+    .ownerpets_picture>img {
+      width: 200px;
+      height: 175px;
+      border-radius: 11px;
+      border-image: 2px solid var(--color-secondary);
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+      margin: 60px 30px 30px 30px;
+    }
+
+  }
+
+  @media screen and (max-height: 500px) {
+    .container-register {
+      height: 150vh;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      align-content: center;
+      padding: 1rem;
+    }
+    .ownerpets_picture>img {
+      width: 200px;
+      height: 150px;
+      border-radius: 11px;
+      border-image: 2px solid var(--color-secondary);
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+      margin: 60px 30px 30px 30px;
+    }
+
+
+  }

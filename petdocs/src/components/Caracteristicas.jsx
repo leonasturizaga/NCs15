@@ -30,7 +30,7 @@ let cards = [
   {
     id: "redCard",
     title: "Crear recordatorio",
-    link: "/evento",
+    link: "/evento-form",
     background: pathRedCircle,
     icon: pathAgenda,
   },
