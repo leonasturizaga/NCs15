@@ -24,7 +24,7 @@ Facilitar el cuidado de tus mascotas proporcionando un lugar seguro y accesible 
 | 3  | Diego Sanabria | [**sanabriadiego/**](https://www.linkedin.com/in/sanabriadiego/) | 💻 | [**sanabriadiego**](https://github.com/sanabriadiego) | Backend   |
 | 4  | Dario Leal | [**dario-adrian-leal/**](www.linkedin.com/in/dario-adrian-leal) |  🖱| [**daro-all**](https://github.com/daro-all) | Frontend   |
 | 5  | Luz Frere | [**luzfrere/**](https://www.linkedin.com/in/luzfrere) | 🖱 | [**Frere-Luz**](https://github.com/Frere-Luz) | Frontend   |
-| 6  | Elena Valera | [**elena-valera/**](www.linkedin.com/in/elena-valera)| 📋 | [**ElenaValera**](https://github.com/ElenaValera) | QA   |
+| 6  | Elena Valera | [**elena-valera/**] (https://www.linkedin.com/in/elena-valera)| 📋 | [**ElenaValera**](https://github.com/ElenaValera) | QA   |
 | 7  | Norayma Sánchez| [**norayma-sanchez-203282133/**](https://www.linkedin.com/in/norayma-sanchez-203282133/)| 📋 | [**Norayma**](https://github.com/Norayma) | Tester   |
 
 ## :computer: QA Documentation
