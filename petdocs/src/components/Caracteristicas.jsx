@@ -23,14 +23,14 @@ let cards = [
   {
     id: "orangeCard",
     title: "Ver mascota",
-    link: "/pet-card",
+    link: "/owner-pets",
     background: pathOrangeCircle,
     icon: pathPaw,
   },
   {
     id: "redCard",
     title: "Crear recordatorio",
-    link: "/evento",
+    link: "/evento-form",
     background: pathRedCircle,
     icon: pathAgenda,
   },
