@@ -21,6 +21,7 @@ import Evento from "./pages/EventoForm";
 import Nosotros from "./pages/Nosotros";
 import Home from "./pages/Home";
 import OwnerCard from "./pages/OwnerCard";
+import OwnerPets from './pages/OwnerPets';
 
 
 // Images
@@ -40,6 +41,8 @@ const App = () => {
           <Route path="/home" element={<Home/>} />
           <Route path="/nosotros" element={<Nosotros/>} />
           <Route path="/owner-card" element={<OwnerCard />} />
+          <Route path="/owner-pets" element={<OwnerPets />} />
+          <Route path="/pet/:id" element={<PetCard />} />
           <Route path="/" element={
             <>
               <Hero />

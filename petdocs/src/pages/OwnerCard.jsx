@@ -109,8 +109,8 @@ const OwnerCard = () => {
     if (!owner) return "...";
 
     return (
-        <div>
-            <div>
+        <div >
+            <div className='container-ownercard' >
 
                 <div className="card-owner">
                     <div className="owner_picture">
