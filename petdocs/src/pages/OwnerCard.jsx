@@ -123,7 +123,7 @@ const OwnerCard = () => {
 
                     <form className="ownerform" onSubmit={handleUpdate}>
                         <h3>{nick}</h3>
-                        <label>Email</label>
+                        <label>mail</label>
                         <input
                             type="email"
                             name="mail"
@@ -131,7 +131,7 @@ const OwnerCard = () => {
                             placeholder={owner.mail}
                             onChange={(e) => setNewMail(e.target.value)}
                         />
-                        <label>Original Password</label>
+                        <label>Contraseña Original</label>
                         <input
                             type="password"
                             name="originalPassword"
@@ -139,7 +139,7 @@ const OwnerCard = () => {
                             placeholder="••••••••"
                             onChange={(e) => setOriginalPassword(e.target.value)}
                         />
-                        <label>New Password</label>
+                        <label>Contraseña nueva</label>
                         <input
                             type="password"
                             name="password"
@@ -147,7 +147,7 @@ const OwnerCard = () => {
                             placeholder="••••••••"
                             onChange={(e) => setNewPassword(e.target.value)}
                         />
-                        <label>Upload Picture</label>
+                        <label>Cargar imagen</label>
                         <input
                             type="file"
                             name="owner_picture"

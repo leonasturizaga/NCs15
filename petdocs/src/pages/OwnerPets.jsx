@@ -27,6 +27,9 @@ const OwnerPets = () => {
 
     return (
         <div className='container-ownerpets'>
+            <div className='ownerpets-title'>
+                <h3 >Mis mascotas</h3>
+            </div>
             <div className='card-ownerpets'>
                 {pets.map((pet) => (
                     <div className='card-ownerpetsrow' key={pet.id}>
@@ -34,36 +37,36 @@ const OwnerPets = () => {
                             <img src={pet.pet_picture} alt="imagen_de_mascota" />
                         </div>
                         <div>
-                        <form className='ownerpetsform'>
-                            <h3>{pet.name}</h3>
-                            <label>Nacimiento</label>
-                            <input
-                                type="text"
-                                name="dob"
-                                value={pet.dob}
-                                readOnly
-                            />
-                            <label>Especie</label>
-                            <input
-                                type="text"
-                                name="category"
-                                value={pet.category}
-                                readOnly
-                            />
-                            <label>Raza</label>
-                            <input
-                                type="text"
-                                name="breed"
-                                value={pet.breed}
-                                readOnly
-                            />
-                            
-                            <a type="button"><Link to={`/pet/${pet.id}`}>Ver Mascota</Link></a>
-                            <a type="button"><Link to="/agenda">Ver Calendario</Link></a>
-                            {/* <button className='btn-vermascota'>Ver Mascota</button>
+                            <form className='ownerpetsform'>
+                                <h3>{pet.name}</h3>
+                                <label>Nacimiento</label>
+                                <input
+                                    type="text"
+                                    name="dob"
+                                    value={pet.dob}
+                                    readOnly
+                                />
+                                <label>Especie</label>
+                                <input
+                                    type="text"
+                                    name="category"
+                                    value={pet.category}
+                                    readOnly
+                                />
+                                <label>Raza</label>
+                                <input
+                                    type="text"
+                                    name="breed"
+                                    value={pet.breed}
+                                    readOnly
+                                />
+
+                                <a type="button"><Link to={`/pet/${pet.id}`}>Ver Mascota</Link></a>
+                                <a type="button"><Link to="/agenda">Ver Calendario</Link></a>
+                                {/* <button className='btn-vermascota'>Ver Mascota</button>
                             <button className="btn-vercalendario">Ver Calendario</button> */}
-                           
-                        </form>
+
+                            </form>
                         </div>
                     </div>
                 ))}

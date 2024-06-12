@@ -1,8 +1,43 @@
+<div align="center">
+
+## PetDocs
+
+</div>
+
 # React + Vite
+## Getting Started
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Clone the repository:
 
-Currently, two official plugins are available:
+```bash
+    https://github.com/No-Country/S15-21-M-Python-Js.git
+```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Install dependencies:
+
+```bash
+# with npm:
+npm install
+```
+
+3. Run in your terminal:
+
+```bash
+# with npm:
+npm run dev
+```
+
+and open http://localhost:5173
+
+## Stack
+
+- "vite": "^5.2.0"
+- "@vitejs/plugin-react-swc": "^3.7.0",
+- "axios": "^1.7.2",
+- "bootstrap": "^5.3.3",
+- "moment": "^2.30.1",
+- "react": "^18.2.0",
+- "react-big-calendar": "^1.12.2",
+- "react-bootstrap": "^2.10.2",
+- "react-dom": "^18.2.0",
+- "react-router-dom": "^6.23.1"
