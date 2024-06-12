@@ -1,12 +1,20 @@
 //***************** opcion 2 ********************* */
-// src/pages/Home.jsx
-import React, { useContext } from 'react';
+// src/pages/Agenda.jsx
+import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../context/UserContext';
 import Caracteristicas from '../components/Caracteristicas';
 import CalendarComponent from '../components/Calendar';
+import EventoUpdate from './EventoUpdate';
 
-const Home = () => {
+const Agenda = () => {
+
   const { nick } = useContext(UserContext);
+  const navigate = useNavigate();
+
+  const handleSelectEvent = (event) => {
+    navigate(`/evento-update/${event.id}`);
+  };
 
   return (
     <div>
@@ -15,10 +23,10 @@ const Home = () => {
           <h3 className="title-h3">Agenda</h3>
         </div>
         <Caracteristicas />
-        <CalendarComponent nick={nick} />
+        <CalendarComponent nick={nick} onSelectEvent={handleSelectEvent} />
       </div>
     </div>
   );
 };
 
-export default Home;
+export default Agenda;
