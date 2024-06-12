@@ -120,7 +120,7 @@ const PetCard = () => {
                         value={pet.breed}
                         readOnly
                     />
-                    <a type="button" > <Link to="/Owner-Pets">Ver Mas </Link></a>
+                    <a type="button" > <Link to="/calendar">Ver Mas </Link></a>
                 </form>
             </div>
         </div>

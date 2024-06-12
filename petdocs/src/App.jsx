@@ -23,10 +23,11 @@ import Nosotros from "./pages/Nosotros";
 import Home from "./pages/Home";
 import OwnerCard from "./pages/OwnerCard";
 import OwnerPets from './pages/OwnerPets';
-
+import Calendar from "./pages/Calendar";
 
 // Images
 import pathLogo from "./assets/LogoPetDocs.png";
+import PetCarousel from './pages/PetCarousel';
 
 const App = () => {
   return (
@@ -45,6 +46,9 @@ const App = () => {
           <Route path="/owner-card" element={<OwnerCard />} />
           <Route path="/owner-pets" element={<OwnerPets />} />
           <Route path="/pet/:id" element={<PetCard />} />
+          <Route path="/calendar" element={<Calendar />} /> 
+          <Route path="/carousel" element={<PetCarousel />} />       
+
 
           <Route path="/" element={
             <>

@@ -23,7 +23,7 @@ let cards = [
   {
     id: "orangeCard",
     title: "Ver mascota",
-    link: "/pet-card",
+    link: "/owner-pets",
     background: pathOrangeCircle,
     icon: pathPaw,
   },

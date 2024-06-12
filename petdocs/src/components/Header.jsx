@@ -127,6 +127,16 @@ const Header = ({ brandName, pathLogo, navItems }) => {
                     className={`dropdown-menu ${scrolled ? "navbar-custom-bg-color" : "bg-white"}`}
                     aria-labelledby="navbarDropdownMenuLink"
                   >
+                                        <a
+                      // className="dropdown-item" 
+                      className={`dropdown-item no-hover-bg ${scrolled ? "navbar-custom-text-color" : ""}`}
+                      href="#/"
+                      onClick={() => {
+                        navigate("/Home");
+                      }}
+                    >
+                      Home
+                    </a>
                     <a
                       // className="dropdown-item" 
                       className={`dropdown-item no-hover-bg ${scrolled ? "navbar-custom-text-color" : ""}`}
