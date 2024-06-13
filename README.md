@@ -27,6 +27,10 @@ Facilitar el cuidado de tus mascotas proporcionando un lugar seguro y accesible 
 | 6  | Elena Valera | [**elena-valera/**](https://www.linkedin.com/in/elena-valera) | 📋 | [**ElenaValera**](https://github.com/ElenaValera) | QA   |
 | 7  | Norayma Sánchez| [**norayma-sanchez-203282133/**](https://www.linkedin.com/in/norayma-sanchez-203282133/)| 📋 | [**Norayma**](https://github.com/Norayma) | Tester   |
 
+## 🎥 Promotional Video
+
+[**PetDocs Video**](https://www.youtube.com/watch?v=fST5Lq7KvWM)
+
 ## :computer: QA Documentation
 
 📂[**PETDOCS**](https://docs.google.com/spreadsheets/d/1xPM3zv8NXTVUyReLON9XW-60tsiZpcEgTQlYT7ceio8/edit?usp=drivesdk)
