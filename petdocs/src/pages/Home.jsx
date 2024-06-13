@@ -1,5 +1,3 @@
-//***************** opcion 2 ********************* */
-// src/pages/Home.jsx
 import React, { useContext } from 'react';
 import { UserContext } from '../context/UserContext';
 import Caracteristicas from '../components/Caracteristicas';

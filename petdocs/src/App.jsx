@@ -1,4 +1,3 @@
-//******************************** opcion 2 ******************** */
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.min.js";

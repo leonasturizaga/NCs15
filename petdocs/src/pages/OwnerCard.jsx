@@ -1,4 +1,3 @@
-//*************************** opcion 3************* */
 import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { UserContext } from '../context/UserContext';

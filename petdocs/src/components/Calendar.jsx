@@ -1,4 +1,3 @@
-//*************************version 3 ***************** */
 import React, { useEffect, useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import moment from 'moment';
@@ -6,7 +5,6 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import './css/Calendar.css';
 import 'moment/locale/es';
 
-// Set moment to use Spanish
 moment.locale('es');
 const localizer = momentLocalizer(moment);
 
